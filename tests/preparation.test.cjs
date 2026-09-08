@@ -1,0 +1,23 @@
+const { test } = require('node:test')
+const assert = require('node:assert/strict')
+const { preparationFor } = require('../.test-build/domain/preparation.js')
+const { seedTokyo } = require('../.test-build/domain/trips.js')
+test('preparation derives suggestions without changing the trip or duplicating existing items', () => {
+  const trip = seedTokyo(); const before = JSON.stringify(trip)
+  const items = preparationFor(trip)
+  assert.equal(JSON.stringify(trip), before)
+  assert.equal(items.filter(i => i.label === 'Check accessibility with venues').length, 1)
+  assert.ok(items.some(i => i.id === 'prep-arrival'))
+  assert.ok(items.some(i => i.id === 'prep-contact'))
+  assert.ok(!items.find(i => i.id === 'prep-contact').done)
+})
+test('confirmation survives regeneration and new preferences affect suggestions', () => {
+  const trip = seedTokyo()
+  const item = preparationFor(trip).find(i => i.id === 'prep-contact')
+  trip.checklist.push({ id: item.id, label: item.label, done: true })
+  trip.dietary = ['Vegetarian']
+  const items = preparationFor(trip)
+  assert.equal(items.filter(i => i.id === item.id).length, 1)
+  assert.equal(items.find(i => i.id === item.id).done, true)
+  assert.match(items.find(i => i.id === 'prep-food').reason, /vegetarian/)
+})

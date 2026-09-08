@@ -1,0 +1,88 @@
+.orb {
+  position: relative;
+  display: block;
+  flex: none;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 68% 26%, rgba(255,255,255,.82), transparent 15%),
+    linear-gradient(145deg, #7877ff 0%, #4c58ed 42%, #733ee7 100%);
+  box-shadow:
+    0 0 0 1px rgba(207, 204, 255, .16) inset,
+    0 0 12px rgba(93, 93, 255, .38),
+    0 0 28px rgba(107, 66, 236, .2);
+  animation: orb-breathe 4.8s ease-in-out infinite;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.orb--nav { width: 28px; height: 28px; }
+.orb--assistant { width: 42px; height: 42px; }
+.orb--fill { width: 100%; height: 100%; }
+.orb--hidden { opacity: 0; transform: scale(.72); }
+.orb--ghost { visibility: hidden; }
+
+.orb__flow {
+  position: absolute;
+  width: 90%;
+  height: 72%;
+  border-radius: 48% 52% 58% 42%;
+  filter: blur(3px);
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.orb__flow--one {
+  left: -28%;
+  bottom: -18%;
+  background: radial-gradient(circle, rgba(183, 125, 255, .95), rgba(130, 70, 245, .18) 68%);
+  animation: orb-flow-one 5.6s ease-in-out infinite alternate;
+}
+
+.orb__flow--two {
+  right: -32%;
+  top: 10%;
+  background: radial-gradient(circle, rgba(69, 190, 255, .76), rgba(79, 91, 245, .12) 70%);
+  animation: orb-flow-two 6.4s ease-in-out infinite alternate;
+}
+
+.orb__glint {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  right: 22%;
+  width: 13%;
+  height: 13%;
+  border-radius: 50%;
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 0 5px rgba(255,255,255,.52);
+}
+
+.orb-flight {
+  position: fixed;
+  z-index: 55;
+  pointer-events: none;
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: top left;
+  transition: transform 720ms cubic-bezier(.18,.82,.2,1);
+  will-change: transform;
+}
+
+.orb-flight--moving {
+  transform: translate3d(var(--orb-dx), var(--orb-dy), 0) scale(var(--orb-scale));
+}
+
+@keyframes orb-breathe {
+  0%, 100% { filter: saturate(.96); }
+  50% { filter: saturate(1.14) brightness(1.04); }
+}
+
+@keyframes orb-flow-one {
+  0% { transform: translate(-8%, 6%) rotate(-18deg) scale(.92); }
+  100% { transform: translate(54%, -30%) rotate(34deg) scale(1.18); }
+}
+
+@keyframes orb-flow-two {
+  0% { transform: translate(10%, -8%) rotate(15deg) scale(.9); }
+  100% { transform: translate(-54%, 38%) rotate(-38deg) scale(1.12); }
+}

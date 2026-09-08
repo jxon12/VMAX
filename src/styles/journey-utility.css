@@ -1,0 +1,108 @@
+/* Honest, useful utility flows; shared typography with the Journey surface. */
+.ju-budget .jr-scan-card{padding:18px;gap:13px}
+.ju-budget .jr-scan-card small{font-size:9px;letter-spacing:1px}
+.ju-budget .jr-scan-card strong{font-size:15px;line-height:1.35;margin-top:7px}
+.ju-budget .jr-scan-card p{font-size:12px;line-height:1.5;margin-top:7px;color:#b1aec5}
+.ju-budget .j-budget-total>strong{font-size:clamp(27px,8.2vw,40px);overflow-wrap:anywhere}
+.ju-budget .jr-scan-card strong,.ju-budget .j-expense-list strong,.ju-budget .j-expense-list small,.ju-budget .j-balances>div>span{overflow-wrap:anywhere}
+.ju-budget .j-expense-list>button>span,.ju-budget .j-balances>div>span{min-width:0;flex:1}
+.ju-budget .j-expense-list>button>b,.ju-budget .j-balances>div>strong{flex:none}
+.ju-status{display:flex;align-items:flex-start;gap:9px;padding:13px 15px;margin:15px 0;border:1px solid #91d9bd29;border-radius:15px;background:#8de3c109;color:#b2e6d2;font-size:12px;line-height:1.5}
+.ju-status>svg{flex:none;margin-top:2px}
+.ju-status button{background:none;color:#d4caff;text-decoration:underline;padding:0 4px;font-size:inherit;min-height:34px}
+.ju-receipt-sheet,.ju-transport-sheet{background:linear-gradient(145deg,#1d1e28,#111218);color:#f5f5f8}
+.ju-receipt-sheet header,.ju-transport-sheet header{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.ju-receipt-sheet header h2,.ju-transport-sheet header h2{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;font-size:28px;font-weight:650;letter-spacing:-1px;margin:9px 0 0}
+.ju-receipt-sheet header .j-eyebrow,.ju-transport-sheet header .j-eyebrow{font-size:9px;line-height:1.5;letter-spacing:.7px;color:#b3a9ed;margin:0}
+.ju-receipt-sheet header>button,.ju-transport-sheet header>button{display:grid;place-items:center;flex:none;min-height:42px;min-width:42px;border-radius:50%;background:#ffffff0a;border:1px solid #ffffff12;color:white}
+.ju-sample-note{display:flex;gap:10px;padding:13px 14px;border-radius:14px;background:#ffffff06;border:1px solid #ffffff0e;color:#b8bac6;font-size:12px;line-height:1.5;margin:20px 0}
+.ju-sample-note>svg{flex:none;margin-top:2px;color:#b8adf6}
+.ju-sample-note small{display:block;font-size:11px;line-height:1.5;color:#9193a3;margin-top:4px}
+.ju-receipt-details{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:12px}
+.ju-receipt-sheet .field-label,.ju-transport-sheet .field-label{font-size:12px;color:#b7bacb}
+.ju-receipt-sheet input,.ju-receipt-sheet select,.ju-transport-sheet input{font-size:14px;color:#f7f7fa;background:#ffffff06;border-color:#ffffff18}
+.ju-receipt-sheet .field-label{margin:12px 0}
+.ju-portion-help{font-size:12px;color:#a4a7b7;line-height:1.65;margin:17px 0 22px}
+.ju-portion-help strong{color:#dcd7fa;font-weight:550}
+.ju-receipt-sheet fieldset.ju-receipt-item{border:1px solid #ffffff14;padding:11px 14px 5px;border-radius:18px;margin:18px 0;background:#ffffff03;min-width:0}
+.ju-receipt-item legend{padding:0 7px;font-size:11px;font-weight:650;letter-spacing:.7px;color:#ada5dc;text-transform:uppercase}
+.ju-receipt-sheet .ju-item-fields{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:10px;margin:0 0 9px}
+.ju-portion-row{display:flex;align-items:center;gap:10px;min-height:62px;border-top:1px solid #ffffff09}
+.ju-portion-row>.j-avatar{flex:none;width:28px;height:28px;font-size:10px;font-style:normal}
+.ju-portion-row>span:nth-child(2){flex:1;min-width:0}
+.ju-portion-row strong,.ju-portion-row small{display:block}
+.ju-portion-row strong{font-size:13px;font-weight:550;color:#eaeaf2}
+.ju-portion-row strong,.ju-split-summary>div>span{overflow-wrap:anywhere;min-width:0}
+.ju-portion-row small{font-size:11px;color:#9395a8;margin-top:4px}
+.ju-portion-row>input{width:62px;min-width:0;min-height:42px;text-align:center;border:1px solid #ffffff19;border-radius:11px;color-scheme:dark;font:inherit;font-size:14px;padding:7px 4px;background:#ffffff07}
+.ju-remove-item{display:block;margin-left:auto;min-height:40px;padding:8px 0;background:none;color:#d3a29e;font-size:11px}
+.ju-add-item{width:100%;margin:0!important}
+.ju-validation{color:#efbdb2;padding:12px 13px;border-radius:12px;background:#ffb4a70b;font-size:12px;line-height:1.5}
+.ju-split-summary{margin:23px 0 10px;padding:19px;border-radius:19px;background:#eeeaff;color:#1e1b30}
+.ju-split-summary h3{font-size:17px;letter-spacing:-.4px;margin:0 0 17px}
+.ju-split-summary>div{display:flex;justify-content:space-between;gap:14px;margin:12px 0;font-size:13px;line-height:1.4}
+.ju-split-summary strong{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px;font-weight:650}
+.ju-split-summary .ju-split-total{border-top:1px dashed #2820383b;padding-top:16px;margin-top:18px;margin-bottom:0;font-size:11px}
+.ju-receipt-sheet .j-primary{background:#ede9ff;color:#221e36;border-color:#ede9ff;box-shadow:none;min-height:49px}
+.ju-receipt-sheet .j-primary:disabled{opacity:.35;cursor:not-allowed}
+.ju-receipt-sheet .fine-print,.ju-transport-sheet .fine-print{color:#a1a4b6!important}
+
+.ju-route .j-muted{font-size:13px;color:#a5a8b8}
+.ju-route .ju-route-backdrop{height:340px;margin-top:13px;border-radius:25px;box-shadow:none}
+.ju-route-backdrop>img{filter:saturate(.77) brightness(.69)}
+.ju-route-backdrop .jr-map-shade{background:linear-gradient(180deg,#07090f48,#08090c11 25%,#08090cda 85%)}
+.ju-map-caption{position:absolute;z-index:2;top:16px;left:17px;right:17px;display:flex;align-items:flex-start;gap:9px;color:#e3e1ee}
+.ju-map-caption>svg{margin-top:2px;flex:none}
+.ju-map-caption>span{font-size:9px;letter-spacing:.85px;font-weight:600}
+.ju-map-caption small{display:block;font-size:10px;font-weight:400;letter-spacing:0;color:#bdbecc;margin-top:5px}
+.ju-map-area{position:absolute;left:22px;right:22px;bottom:144px}
+.ju-map-area small{display:block;font-size:9px;letter-spacing:1.4px;color:#c3bfd9}
+.ju-map-area strong{display:block;font-size:35px;line-height:1.1;letter-spacing:-1.5px;font-weight:550;color:#fff;margin-top:8px}
+.ju-map-area strong,.ju-route .jr-map-status strong,.ju-stop-list li strong,.ju-stop-list li small,.ju-next-day strong,.ju-handoff h3{overflow-wrap:anywhere}
+.ju-route .jr-map-status>div,.ju-next-day>span{min-width:0}
+.ju-route .jr-map-status{min-height:100px;align-items:center;background:#14151ccc;border-color:#ffffff1c}
+.ju-route .jr-map-status small{font-size:9px;line-height:1.5;color:#b9b4d0;letter-spacing:.6px}
+.ju-route .jr-map-status strong{font-size:14px;line-height:1.4;margin-top:6px}
+.ju-route .jr-map-status p{font-size:11px;line-height:1.4;color:#a7a9b9;margin-top:5px}
+.ju-route-backdrop.schematic{background:radial-gradient(ellipse at 80% 20%,#66558f55,transparent 65%),linear-gradient(120deg,#1b2231,#16131e)}
+.ju-route-abstract{position:absolute;inset:70px 28px 125px;display:flex;align-items:center;justify-content:space-around;opacity:.4}
+.ju-route-abstract:before{content:"";position:absolute;left:15%;right:15%;border-top:1px dashed #c5b7ff}
+.ju-route-abstract i{position:relative;display:block;width:15px;height:15px;background:#c1afe7;border:4px solid #272237;border-radius:50%;outline:1px solid #c1afe733}
+.ju-route .ju-handoff{background:#191923;border:1px solid #ffffff12;color:#f5f3fc;padding:20px;border-radius:24px;margin-top:13px}
+.ju-handoff .jr-handoff-head>span{font-size:9px;letter-spacing:.8px;color:#b5a9ff}
+.ju-handoff .jr-handoff-head>small{font-size:12px;color:#c4c0d5}
+.ju-handoff h3{font-size:23px!important;line-height:1.2;letter-spacing:-.7px!important;color:#f5f3fc}
+.ju-handoff>p{font-size:12px;line-height:1.6;color:#a1a1b7}
+.ju-handoff .fine-print{color:#9091a8!important;font-size:10px!important}
+.ju-transport-options{display:flex;flex-direction:column;gap:8px;margin:17px 0 12px}
+.ju-transport-options button{display:flex;align-items:center;gap:12px;min-height:64px;padding:13px 14px;border-radius:15px;background:#f1edff;color:#262035;text-align:left}
+.ju-transport-options button+button{background:#ffffff05;border:1px solid #ffffff14;color:#cac3e7}
+.ju-transport-options button>span{min-width:0;flex:1}
+.ju-transport-options strong,.ju-transport-options small{display:block}
+.ju-transport-options strong{font-size:13px;font-weight:650}
+.ju-transport-options small{font-size:11px;line-height:1.4;color:#7a738e;margin-top:4px}
+.ju-transport-options button+button small{color:#9090a4}
+.ju-stop-list li{min-height:70px;padding:14px 2px}
+.ju-stop-list li strong{font-size:13px;line-height:1.4}
+.ju-stop-list li small{font-size:11px;margin-top:5px;white-space:normal;line-height:1.45}
+.ju-stop-list li b{font-size:8px;flex:none}
+.ju-stop-list li.next>span{background:#9c8aff24;color:#d9cdff;border:1px solid #ab9af538}
+.ju-next-day{display:flex;align-items:center;gap:12px;margin:15px 0;padding:15px;border:1px solid #ffffff12;border-radius:18px;background:#ffffff04}
+.ju-next-day>span{flex:1;font-size:10px;line-height:1.5;color:#9998aa}
+.ju-next-day strong{display:block;font-size:13px;color:#ece9f7;margin-top:6px}
+.ju-transfer-facts{padding:10px 0;margin:16px 0;border-top:1px solid #ffffff13;border-bottom:1px solid #ffffff13}
+.ju-transfer-facts p{display:flex;justify-content:space-between;gap:12px;font-size:12px;line-height:1.5}
+.ju-transfer-facts span{color:#979aae}
+.ju-transfer-facts strong{font-weight:550;text-align:right}
+.ju-maps-link{display:flex;gap:12px;align-items:center;padding:16px 14px;border-radius:17px;background:#eae5ff;color:#262036;text-decoration:none;margin:21px 0 14px}
+.ju-maps-link>span{flex:1;min-width:0}
+.ju-maps-link strong,.ju-maps-link small{display:block}
+.ju-maps-link strong{font-size:14px}
+.ju-maps-link small{font-size:11px;line-height:1.5;color:#776d8e;margin-top:5px}
+.ju-transport-sheet .jr-ride-apps{margin-top:14px}
+.ju-transport-sheet .jr-ride-apps a{min-height:65px;padding:11px;background:#ffffff07;border-color:#ffffff17;color:#ece8f8}
+.ju-transport-sheet .jr-ride-apps strong{font-size:12px}
+.ju-transport-sheet .jr-ride-apps small{font-size:10px;color:#a3a0b5;line-height:1.4}
+.ju-transport-sheet .ju-sample-note{font-size:11px;color:#9698ad}
+.ju-route button:focus-visible,.ju-budget button:focus-visible,.ju-receipt-sheet :is(button,input,select):focus-visible,.ju-transport-sheet :is(button,input,a):focus-visible{outline:2px solid #b7a4ff;outline-offset:3px}
+@media(max-width:360px){.ju-receipt-details{grid-template-columns:1fr}.ju-receipt-details .field-label{margin:6px 0}.ju-receipt-sheet{padding-left:16px;padding-right:16px}.ju-map-area strong{font-size:30px}.ju-route .jr-map-status strong{font-size:13px}.ju-next-day{align-items:flex-start;flex-direction:column}}

@@ -1,0 +1,33 @@
+.profile-saved-entry {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 96px;
+  padding: 20px 17px;
+  margin: 9px 0 30px;
+  color: #d7e1ff;
+  text-align: left;
+}
+
+.profile-saved-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #bcb3f92b, #a7cbe910);
+  border: 1px solid #c5c1ff29;
+  color: #cbc3ff;
+}
+
+.profile-saved-copy { flex: 1; min-width: 0; }
+.profile-saved-copy strong { display: block; font-size: 17px; font-weight: 600; color: #f0f5fb; }
+.profile-saved-copy small { display: block; margin-top: 7px; font-size: 12px; line-height: 1.5; color: var(--j-muted); }
+.profile-saved-entry > svg { flex: none; }
+.profile-saved-entry:hover { border-color: #c5c1ff50; }
+.profile-saved-entry:focus-visible { outline: 2px solid #afcaff; outline-offset: 4px; }
+.profile-dna-heading { padding-top: 23px; border-top: 1px solid var(--j-line); }
+.profile-dna-heading h2 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -.6px; }
+.profile-dna-heading > p:last-child { margin: 10px 0 0; color: var(--j-muted); font-size: 13px; line-height: 1.7; }

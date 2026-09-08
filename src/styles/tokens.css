@@ -1,0 +1,11 @@
+:root {
+  color: #f8f4ec;
+  background: #03060b;
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --shell-width: 410px;
+  --surface: #08090d;
+  --ivory: #e9dfd0;
+  --violet: #9d93ff;
+}

@@ -1,0 +1,365 @@
+/* Journey Lens: quiet content beneath a clear, photographic navigation layer.
+   Keep refraction on controls. Reading surfaces use contrast, spacing and hairlines. */
+.journey-lens :is(.jg-plan, .jg-route, .jg-budget, .jg-group) {
+  --jg-muted: #b9b9b9;
+  --jg-quiet: #999999;
+  --jg-accent: #e8e8e8;
+  color: #f7f7f7;
+}
+.journey-lens :is(.jg-plan-heading, .jg-utility-heading) {
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+.journey-lens :is(.jg-plan-heading h2, .jg-utility-heading h2) {
+  font-size: 32px;
+  line-height: 1.08;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  color: #f8f8f8;
+}
+.journey-lens :is(.jg-plan-heading p, .jg-utility-heading p) {
+  margin-top: 10px;
+  color: #bbbbbb;
+  font-size: 12px;
+}
+.journey-lens :is(.jg-plan-assist, .jg-mode-pill) {
+  background: linear-gradient(135deg, #ffffff12, #ffffff03);
+  border-color: #ffffff28;
+  border-radius: 99px;
+  box-shadow: inset 0 1px #ffffff15;
+  color: #e5e5e5;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+/* Plan is an itinerary, not a stack of dashboard widgets. */
+.journey-lens .jg-plan-decision {
+  min-height: 80px;
+  padding: 16px;
+  border-radius: 24px;
+  background: linear-gradient(130deg, #ffffff17, #ffffff05);
+  border-color: #ffffff30;
+  box-shadow: inset 0 1px #ffffff1a, inset 0 -1px #ffffff08;
+  backdrop-filter: blur(8px) saturate(115%);
+  -webkit-backdrop-filter: blur(8px) saturate(115%);
+}
+.journey-lens .jg-plan-decision.needs-review {
+  background: linear-gradient(125deg, #ffffff1c, #ffffff07);
+  border-color: #ffffff42;
+}
+.journey-lens .jg-plan-decision strong { font-size: 15px; letter-spacing: -.25px; }
+.journey-lens .jg-plan-decision small { color: #bbbbbb; }
+.journey-lens .jg-plan-decision > svg { color: #ebebeb; }
+.journey-lens .jg-plan-people { margin: 10px 0 16px; }
+.journey-lens .jg-plan-availability {
+  background: #ffffff03;
+  border-color: #ffffff14;
+}
+.journey-lens .jg-plan-avatar-stack i { border-color: #252525; }
+.journey-lens .jg-plan-timeline-heading { margin: 24px 0 8px; }
+.journey-lens .jg-plan .jg-plan-timeline-heading h3 {
+  font-size: 17px;
+  letter-spacing: -.4px;
+  font-weight: 550;
+}
+.journey-lens .jg-plan-timeline-heading button { color: #c6c6c6; }
+.journey-lens .jg-plan-timeline-heading button[aria-pressed=true] {
+  color: #f6f6f6;
+  background: #ffffff16;
+}
+.journey-lens .jg-plan-timeline > li {
+  grid-template-columns: 39px minmax(0, 1fr);
+  column-gap: 13px;
+}
+.journey-lens .jg-plan-time > time { margin-top: 24px; color: #cbcbcb; font-size: 11px; }
+.journey-lens .jg-plan-time > button > span {
+  background: #282828;
+  border-color: #cccccc4d;
+  color: #d5d5d5;
+  width: 20px;
+  height: 20px;
+}
+.journey-lens .jg-plan-time > button.is-done > span {
+  background: #dcdcdc;
+  color: #2e2e2e;
+  border-color: #dcdcdc;
+}
+.journey-lens .jg-plan-timeline > li:not(:last-child) .jg-plan-time:after {
+  top: 83px;
+  bottom: -43px;
+  border-color: #d9d9d926;
+}
+.journey-lens .jg-plan-stop {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #e6e6e617;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  overflow: visible;
+}
+.journey-lens .jg-plan-stop-main {
+  gap: 15px;
+  min-height: 127px;
+  padding: 19px 0;
+  border-radius: 16px;
+  transition: background .2s ease, transform .2s ease;
+}
+.journey-lens .jg-plan-stop-main > img {
+  width: 66px;
+  height: 90px;
+  border-radius: 16px;
+  box-shadow: 0 5px 16px #0002;
+}
+.journey-lens .jg-plan-stop-icon {
+  width: 56px;
+  height: 70px;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #ffffff0e, #ffffff03);
+  color: #d7d7d7;
+  border: 1px solid #ffffff10;
+}
+.journey-lens .jg-plan-stop:is(.meal, .rest) .jg-plan-stop-icon {
+  background: linear-gradient(145deg, #ffffff0e, #ffffff03);
+  color: #d7d7d7;
+}
+.journey-lens .jg-plan-stop-copy strong {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 550;
+  letter-spacing: -.45px;
+  color: #f3f3f3;
+}
+.journey-lens .jg-plan-stop-copy > small { font-size: 11px; margin-top: 8px; color: #b4b4b4; }
+.journey-lens .jg-plan-stop-copy > small.jg-plan-kind {
+  margin: 0 0 7px;
+  color: #a7a7a7;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+.journey-lens .jg-plan-stop-copy > small.jg-plan-participants { color: #bebebe; font-size: 10px; }
+.journey-lens .jg-plan-stop-copy > small.jg-plan-participants.is-edited { color: #d7c4a8; }
+.journey-lens .jg-plan-connection { margin: 11px 0 9px; font-size: 10px; color: #989898; }
+.journey-lens .jg-plan-connection > span { background: #c6c6c649; }
+.journey-lens .jg-plan-timeline > li[draggable=true] .jg-plan-stop {
+  background: #ffffff04;
+  border: 1px solid #ffffff23;
+  border-radius: 20px;
+  padding-inline: 10px;
+}
+.journey-lens .jg-plan-order { color: #bbbbbb; }
+.journey-lens .jg-plan-order button { color: #e5e5e5; }
+.journey-lens .jg-plan-add { margin-top: 29px; }
+.journey-lens .jg-plan-add > button { border-radius: 99px; color: #e4e4e4; border-color: #ffffff22; background: #ffffff06; }
+.journey-lens .jg-plan-add > button.jg-plan-add-primary { background: #efefef; border-color: #efefef; color: #262626; }
+
+/* Group: monochrome speech, a clear composer, purple only for the Agent. */
+.journey-lens .jg-group .j-section-heading h2 { font-size: 30px; letter-spacing: -1px; }
+.journey-lens .jg-group .j-section-heading .j-text-button { color: #bababa; }
+.journey-lens .jg-chat-tools { border-bottom-color: #ffffff12; }
+.journey-lens .jg-chat-tools button {
+  color: #dcdcdc;
+  background: #ffffff06;
+  border-color: #ffffff21;
+  box-shadow: inset 0 1px #ffffff09;
+}
+.journey-lens .jg-chat-tools .jg-decisions-trigger { background: #ffffff0a; color: #e5e5e5; border-color: #ffffff2a; }
+.journey-lens .jg-chat-tools button > i { color: #e3e3e3; }
+.journey-lens .jg-group .j-message-bubble {
+  background: #ffffff07;
+  border-color: #ffffff15;
+  box-shadow: inset 0 1px #ffffff09;
+}
+.journey-lens .jg-group .j-message.mine .j-message-bubble {
+  background: linear-gradient(145deg, #dcdcdc21, #dfdfdf10);
+  border-color: #e5e5e52e;
+}
+.journey-lens .jg-group .j-message.ai .j-message-bubble {
+  background: linear-gradient(145deg, #ffffff0d, #ffffff04);
+  border-color: #cbc4ee29;
+}
+.journey-lens .jg-group .j-message-bubble > small { color: #cacaca; }
+.journey-lens .jg-group .j-message-bubble time { color: #a3a3a3; }
+.journey-lens .jg-group .j-message-bubble p { color: #ebebeb; }
+.journey-lens .jg-group .agent-chat-link {
+  color: #dedfeb;
+  background: #ffffff07;
+  border-color: #dedde726;
+}
+.journey-lens .jg-group .agent-chat-suggestions > button { color: #c2c2c2; border-color: #ffffff1c; }
+.journey-lens .jg-group .jr-chat-composer form {
+  background: linear-gradient(140deg, #ffffff14, #ffffff04);
+  border-color: #ffffff42;
+  box-shadow: inset 0 1px #ffffff2b, inset 0 -1px #ffffff0c, 0 8px 25px #0002;
+  backdrop-filter: blur(8px) saturate(110%);
+  -webkit-backdrop-filter: blur(8px) saturate(110%);
+}
+.journey-lens .jg-group .jr-chat-composer input { color: #f2f2f2; }
+.journey-lens .jg-group .jr-chat-composer input::placeholder { color: #acacac; }
+.journey-lens .jg-group .jr-at-button { color: #e3e3e3; }
+.journey-lens .jg-group .j-send { color: #2e2e2e; background: #e9e9e9; border-color: #ffffff70; }
+.journey-lens .jg-group .j-send:disabled { background: #ffffff0b; color: #a5a5a5; border-color: #ffffff18; }
+.journey-lens .jg-group .jr-mention-menu {
+  background: linear-gradient(145deg, #353535f7, #212121f7);
+  border-color: #ffffff3d;
+  box-shadow: inset 0 1px #ffffff26, 0 20px 55px #0007;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.journey-lens .jg-group .jr-mention-menu > div strong { color: #f1f1f1; }
+.journey-lens .jg-group .jr-mention-menu :is(div, button) small { color: #bababa; }
+.journey-lens .jg-group .agent-chat-history > summary,
+.journey-lens .jg-group > .j-demo-label { color: #a3a3a3; }
+
+/* Route: more actual map, less veil. The lower lens lets its streets show through. */
+.journey-lens .jg-route .jg-route-map {
+  height: clamp(330px, calc(100svh - 455px), 424px);
+  border-radius: 30px;
+  border-color: #ffffff3d;
+  background: #262626;
+  box-shadow: inset 0 1px #ffffff26, 0 18px 35px #0003;
+}
+.journey-lens .jg-route .jg-route-map > img { filter: saturate(.85) brightness(.96) contrast(1.04); }
+.journey-lens .jg-route .jg-route-map .jr-map-shade {
+  background: linear-gradient(180deg, #0f0f0f75, transparent 30%, transparent 70%, #0e0e0e12);
+}
+.journey-lens .jg-map-heading { top: 25px; left: 24px; right: 24px; }
+.journey-lens .jg-map-heading strong { font-size: 30px; letter-spacing: -.9px; color: #fcfcfc; }
+.journey-lens .jg-map-heading > span { color: #e5e5e5; text-shadow: 0 1px 6px #000b; }
+.journey-lens .jg-map-destination {
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  padding: 18px;
+  border: 1px solid #ffffff5a;
+  border-radius: 25px;
+  background: linear-gradient(140deg, #2020208f, #1e1e1e65);
+  box-shadow: inset 0 1px #ffffff42, inset 0 -1px #ffffff18, 0 8px 20px #0003;
+  backdrop-filter: blur(8px) saturate(130%);
+  -webkit-backdrop-filter: blur(8px) saturate(130%);
+}
+.journey-lens .jg-map-destination-label { color: #d8d8d8; }
+.journey-lens .jg-map-destination-label > time { color: #f3f3f3; }
+.journey-lens .jg-map-destination h3 { font-size: 22px; letter-spacing: -.65px; font-weight: 550; margin-top: 10px; }
+.journey-lens .jg-map-destination > p { color: #d5d5d5; }
+.journey-lens .jg-map-actions > button { border-radius: 99px; }
+.journey-lens .jg-directions-button { color: #2f2f2f; background: #f1f1f1; border: 1px solid #ffffff70; }
+.journey-lens .jg-visited-button { color: #efefef; background: #ffffff08; border-color: #ffffff38; }
+.journey-lens .jg-route-stops {
+  padding-inline: 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #ffffff16;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.journey-lens .jg-route-stops li { min-height: 79px; border-color: #ffffff14; }
+.journey-lens .jg-route-stops li strong { font-size: 15px; font-weight: 550; color: #ececec; }
+.journey-lens .jg-route-stops li small { color: #b0b0b0; }
+.journey-lens .jg-route-stops li > span { color: #cecece; background: #ffffff04; border-color: #ffffff1b; }
+.journey-lens .jg-route-stops li.next > span { color: #303030; background: #e5e5e5; border-color: #f6f6f680; }
+.journey-lens .jg-route-stops li b { color: #d5d5d5; }
+
+/* Budget reads like a quiet financial ledger, with a single luminous summary. */
+.journey-lens .jg-budget-summary {
+  border-radius: 28px;
+  border-color: #ffffff37;
+  background: linear-gradient(140deg, #ffffff16, #ffffff04 72%);
+  box-shadow: inset 0 1px #ffffff25, inset 0 -1px #ffffff09;
+  backdrop-filter: blur(8px) saturate(110%);
+  -webkit-backdrop-filter: blur(8px) saturate(110%);
+}
+.journey-lens .jg-budget-summary .j-budget-total { padding: 27px 23px 22px; }
+.journey-lens .jg-budget-summary .j-budget-total > span { color: #c8c8c8; font-size: 12px; }
+.journey-lens .jg-budget-summary .j-budget-total > strong {
+  color: #f5f5f5;
+  font-size: clamp(36px, 11.7vw, 48px);
+  font-weight: 500;
+  letter-spacing: -2.2px;
+  line-height: 1.12;
+  margin-top: 14px;
+}
+.journey-lens .jg-budget-summary .j-budget-total > strong.negative { color: #f0b6af; }
+.journey-lens .jg-budget-summary .j-budget-track { margin-top: 27px; height: 3px; background: #e5e5e518; }
+.journey-lens .jg-budget-summary .j-budget-track > i { background: linear-gradient(90deg, #b7b7b7, #ededed); }
+.journey-lens .jg-budget-figures span { color: #b1b1b1; }
+.journey-lens .jg-budget-figures strong { color: #e5e5e5; font-weight: 500; font-size: 14px; }
+.journey-lens .jg-budget .jg-receipt-entry { padding: 17px 22px; min-height: 79px; background: #ffffff03; border-top-color: #ffffff1c; }
+.journey-lens .jg-receipt-entry .jr-scan-icon { color: #e0e0e0; border-color: #ffffff23; background: #ffffff07; border-radius: 50%; }
+.journey-lens .jg-budget .jg-receipt-entry strong { color: #efefef; }
+.journey-lens .jg-budget .jg-receipt-entry p { color: #b6b6b6; }
+.journey-lens .jg-receipt-entry > svg { color: #e2e2e2; }
+.journey-lens :is(.jg-expenses-card, .jg-budget .jg-balance-card) {
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ffffff17;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.journey-lens .jg-expenses-card .j-expense-list > button { min-height: 78px; padding: 17px 0; border-color: #ffffff14; }
+.journey-lens .jg-expenses-card .j-expense-list strong { font-size: 15px; font-weight: 500; color: #f0f0f0; }
+.journey-lens .jg-expenses-card .j-expense-list small { color: #adadad; font-size: 11px; }
+.journey-lens .jg-expenses-card .j-expense-list b { color: #eaeaea; font-size: 13px; font-weight: 500; }
+.journey-lens .jg-expand-expenses { color: #d9d9d9; border-color: #ffffff16; }
+.journey-lens .jg-category-disclosure > summary { color: #b7b7b7; }
+.journey-lens .jg-category-disclosure .j-budget-categories p > span { color: #bebebe; }
+.journey-lens .jg-category-disclosure .j-budget-categories strong { color: #e5e5e5; }
+.journey-lens .jg-budget .jg-balance-card > div { min-height: 75px; border-color: #ffffff14; }
+.journey-lens .jg-budget .jg-balance-card > div > span:first-child { color: #eaeaea; font-size: 14px; }
+.journey-lens .jg-balance-amount strong { font-size: 14px; font-weight: 500; }
+.journey-lens .jg-balance-amount strong.positive { color: #e2e2e2; }
+.journey-lens .jg-balance-amount small { color: #b1b1b1; }
+.journey-lens .jg-utility-section-heading { margin-top: 29px; }
+.journey-lens .jg-utility-section-heading h3 { font-size: 18px; font-weight: 550; color: #f0f0f0; }
+.journey-lens .jg-utility-section-heading > button { color: #e2e2e2; }
+.journey-lens .jg-utility-note > summary { color: #bababa; }
+.journey-lens .jg-utility-note > p { color: #ababab; }
+
+@media (hover: hover) and (pointer: fine) {
+  .journey-lens .jg-plan-stop-main:hover { background: #ffffff04; transform: translateX(2px); }
+  .journey-lens .jg-expenses-card .j-expense-list > button:hover { background: #ffffff04; }
+}
+@media (max-width: 360px) {
+  .journey-lens :is(.jg-plan-heading h2, .jg-utility-heading h2) { font-size: 29px; }
+  .journey-lens .jg-plan-assist { max-width: 98px; padding-inline: 9px; }
+  .journey-lens .jg-plan-timeline > li { grid-template-columns: 34px minmax(0, 1fr); column-gap: 9px; }
+  .journey-lens .jg-plan-stop-main { gap: 11px; }
+  .journey-lens .jg-plan-stop-main > img { width: 51px; height: 80px; border-radius: 13px; }
+  .journey-lens .jg-plan-stop-icon { width: 44px; height: 60px; }
+  .journey-lens .jg-plan-stop-copy strong { font-size: 16px; }
+  .journey-lens .jg-plan-stop-copy > small { font-size: 10px; }
+  .journey-lens .jg-plan-stop-copy > small.jg-plan-participants { font-size: 9px; }
+  .journey-lens .jg-group .j-section-heading h2 { font-size: 28px; }
+  .journey-lens .jg-chat-tools { gap: 7px; }
+  .journey-lens .jg-chat-tools button { font-size: 11px; padding-inline: 10px; }
+  .journey-lens .jg-route .jg-route-map { height: clamp(310px, calc(100svh - 420px), 390px); }
+  .journey-lens .jg-map-heading { left: 20px; right: 20px; }
+  .journey-lens .jg-map-destination { left: 9px; right: 9px; padding: 15px; }
+  .journey-lens .jg-map-destination h3 { font-size: 20px; }
+  .journey-lens .jg-budget-summary .j-budget-total { padding: 24px 19px 20px; }
+  .journey-lens .jg-budget-summary .j-budget-total > strong { font-size: 36px; letter-spacing: -1.8px; }
+  .journey-lens .jg-budget .jg-receipt-entry { padding: 16px 18px; gap: 10px; }
+  .journey-lens .jg-expenses-card .j-expense-list b { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-lens .jg-plan-stop-main { transition: none; }
+  .journey-lens .jg-plan-stop-main:hover { transform: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .journey-lens :is(.jg-plan-decision, .jg-budget-summary, .jg-plan-assist, .jg-mode-pill),
+  .journey-lens .jg-group .jr-chat-composer form,
+  .journey-lens .jg-group .jr-mention-menu { background: #2e2e2e; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .journey-lens .jg-map-destination { background: #2d2d2d; backdrop-filter: none; -webkit-backdrop-filter: none; }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  .journey-lens .jg-map-destination { background: #2d2d2d; }
+  .journey-lens .jg-group .jr-mention-menu { background: #2d2d2d; }
+}

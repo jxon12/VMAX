@@ -1,0 +1,217 @@
+/* Destination photography supplies the colour; UI supplies space and quiet clarity. */
+.app-lens .discovery-lens-page {
+  background: #111515;
+  padding: 27px 21px 132px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+}
+.app-lens .discovery-lens-heading { display:flex; align-items:center; gap:15px; margin:0 0 26px; }
+.app-lens .discovery-lens-heading > div { min-width:0; }
+.app-lens .discovery-lens-heading h1 {
+  margin:0; font-family:'Iowan Old Style',Baskerville,Georgia,serif; font-size:42px;
+  line-height:1.07; letter-spacing:-1.6px; font-weight:500; color:#f5f5f5;
+}
+.app-lens .discovery-lens-heading p { margin:7px 0 0; font-size:12px; line-height:1.6; color:#adadad; }
+.app-lens .discovery-lens-heading .page-back {
+  flex:none; height:44px; width:44px; color:#f5f5f5; border:1px solid #ffffff36;
+  background:linear-gradient(145deg,#ffffff13,#ffffff03); box-shadow:inset 0 1px #ffffff22;
+  backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px);
+}
+.app-lens .discovery-lens-page .discover-toolbar { grid-template-columns:minmax(0,1fr) 50px; gap:10px; margin:0 0 24px; }
+.app-lens .discovery-lens-page .discover-search {
+  height:50px; padding-inline:16px; border:1px solid #ffffff26; border-radius:99px;
+  background:linear-gradient(140deg,#ffffff0f,#ffffff03); color:#c3c3c3; box-shadow:inset 0 1px #ffffff0d;
+}
+.app-lens .discovery-lens-page .discover-search input { font-size:14px; min-width:0; color:#f0f0f0; }
+.app-lens .discovery-lens-page .discover-search input::placeholder { color:#999999; }
+.app-lens .discovery-lens-page .discover-search:focus-within { outline:2px solid #dedede; outline-offset:3px; }
+.app-lens .discovery-lens-page .discover-filter-trigger {
+  width:50px; height:50px; border-radius:50%; border-color:#ffffff33;
+  background:linear-gradient(145deg,#ffffff13,#ffffff04); color:#e6e6e6; box-shadow:inset 0 1px #ffffff1f;
+}
+.app-lens .discovery-lens-page .discover-filter-trigger:is(.open,.active) { color:#222222; background:#ededed; border-color:#ffffff60; }
+.app-lens .discovery-lens-page .discover-filter-trigger > span { background:#ececec; color:#262626; border-color:#111515; font-size:9px; min-width:20px; height:20px; }
+.app-lens .discovery-lens-page .discover-filter-drawer { margin:0 0 24px; padding:15px 15px 2px; background:#ffffff04; border:1px solid #ffffff20; border-radius:24px; }
+.app-lens .discovery-lens-page .filter-bar { gap:8px; }
+.app-lens .discovery-lens-page .filter-bar button { min-height:40px; color:#c7c7c7; border-color:#ffffff20; background:#ffffff04; font-size:12px; }
+.app-lens .discovery-lens-page .filter-bar button.active { color:#282828; background:#e6e6e6; border-color:#ffffff66; }
+.app-lens .discovery-lens-page .filter-options { background:#282828; border-color:#ffffff23; border-radius:20px; padding:15px; box-shadow:none; }
+.app-lens .discovery-lens-page .filter-options p { font-size:12px; color:#bdbdbd; }
+.app-lens .discovery-lens-page .filter-options button { min-height:44px; font-size:12px; color:#e5e5e5; border-color:#ffffff24; }
+.app-lens .discovery-lens-page .filter-options button.selected { color:#292929; background:#ebebeb; border-color:#ffffff60; }
+.app-lens .discovery-lens-page .discover-list { gap:23px; }
+.app-lens .discovery-demo-note { text-align:center; color:#868686; font-size:10px; line-height:1.6; margin:27px 0 0; }
+.app-lens .discovery-lens-page .empty-state { padding:40px 10px; color:#c2c2c2; font-size:14px; line-height:1.6; }
+
+/* Also used in Saved: a photographic keepsake rather than a pretend airline ticket. */
+.app-lens .activity-card { color:#f8f8f8; border:1px solid #ffffff23; border-radius:28px; background:#232323; overflow:hidden; box-shadow:0 10px 28px #0002; }
+.app-lens .activity-card--ticket { height:310px; }
+.app-lens .discovery-lens-page .activity-card--ticket:first-child { height:386px; }
+.app-lens .activity-card--ticket .activity-card-main { border:0; border-radius:0; background:none; box-shadow:none; overflow:hidden; }
+.app-lens .activity-card--ticket .activity-card-main::before,
+.app-lens .activity-card--ticket .activity-card-main::after,
+.app-lens .activity-card--ticket .activity-card-main > img + .activity-card-shade::after { content:none; }
+.app-lens .activity-card--ticket img { left:0; width:100%; height:100%; filter:none; object-position:center; }
+.app-lens .activity-card img { transition:transform .75s cubic-bezier(.2,.65,.2,1); }
+.app-lens .activity-card-shade,
+.app-lens .activity-card--ticket .activity-card-shade { background:linear-gradient(180deg,#0d0d0d25,transparent 29%,#0c0c0c16 44%,#0c0c0cd9 100%); }
+.app-lens .activity-card-season { position:absolute; z-index:2; top:19px; left:20px; right:73px; text-align:left; font-size:11px; font-weight:500; line-height:1.5; color:#f3f3f3; text-shadow:0 1px 8px #000a; }
+.app-lens .activity-card--ticket .activity-card-copy { left:21px; right:21px; top:auto; bottom:95px; color:#fbfbfb; }
+.app-lens .activity-card--ticket .activity-card-copy strong { display:block; margin:0; font-family:'Iowan Old Style',Baskerville,Georgia,serif; font-size:31px; font-weight:500; letter-spacing:-1px; line-height:1.05; overflow:visible; -webkit-line-clamp:unset; text-wrap:balance; }
+.app-lens .activity-card--ticket .activity-card-copy > span { margin-top:12px; color:#dadada; font-size:11px; line-height:1.5; align-items:flex-start; gap:5px; }
+.app-lens .activity-card-copy > span svg { flex:none; margin-top:1px; }
+.app-lens .activity-card--ticket .activity-card-copy em { display:none; }
+.app-lens .activity-card--ticket .activity-ticket-window {
+  position:absolute; z-index:3; display:flex; align-items:center; justify-content:space-between; gap:10px;
+  top:auto; bottom:13px; left:13px; right:13px; width:auto; height:auto; min-height:64px;
+  padding:12px 16px; border:1px solid #ffffff40; border-radius:20px;
+  background:linear-gradient(130deg,#ffffff15,#ffffff03); box-shadow:inset 0 1px #ffffff2d,inset 0 -1px #ffffff0b;
+  backdrop-filter:blur(7px) saturate(120%); -webkit-backdrop-filter:blur(7px) saturate(120%);
+  color:#f3f3f3;
+}
+.app-lens .activity-card--ticket .activity-ticket-window::before,
+.app-lens .activity-card--ticket .activity-ticket-window::after { content:none; }
+.app-lens .activity-card--ticket .activity-ticket-window small { display:block; font-size:9px; line-height:1.4; color:#d1d1d1; letter-spacing:.05em; font-weight:400; }
+.app-lens .activity-card--ticket .activity-ticket-window strong { display:block; font-family:inherit; font-size:13px; font-weight:500; line-height:1.4; margin-top:3px; color:#f3f3f3; }
+.app-lens .activity-card .card-save {
+  width:44px; height:44px; top:12px; right:12px; border:1px solid #ffffff50;
+  background:linear-gradient(145deg,#ffffff1c,#1919193d); box-shadow:inset 0 1px #ffffff36,inset 0 -1px #ffffff0b;
+  color:#f8f8f8; backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px);
+}
+.app-lens .activity-card .card-save.saved { background:#ebebebe8; color:#272727; border-color:#ffffffa1; }
+.app-lens .activity-card--landscape { height:214px; }
+.app-lens .activity-card--portrait { height:285px; }
+.app-lens .activity-card--landscape .activity-card-copy { left:20px; bottom:20px; }
+.app-lens .activity-card--landscape .activity-card-copy strong { font-size:26px; line-height:1.05; }
+.app-lens .activity-card--portrait .activity-card-copy strong { font-size:23px; }
+
+/* This Season: one scene, one destination, a light sideways gesture. */
+.app-lens .season-swipe-page { background:#111515; padding:25px 21px 126px; }
+.app-lens .season-lens-atmosphere { position:absolute; z-index:-1; inset:-60px -80px auto; height:760px; background-size:cover; background-position:center; opacity:.16; filter:blur(60px) saturate(.65); mask-image:linear-gradient(#000,transparent 94%); pointer-events:none; animation:discovery-atmosphere-in .65s ease both; }
+.app-lens .swipe-topbar { gap:12px; margin-bottom:24px; }
+.app-lens .swipe-topbar .j-icon-button { height:44px; width:44px; flex:none; background:linear-gradient(140deg,#ffffff12,#ffffff03); border:1px solid #ffffff33; box-shadow:inset 0 1px #ffffff23; backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); }
+.app-lens .swipe-title { margin:0; font-family:'Iowan Old Style',Baskerville,Georgia,serif; font-size:34px; line-height:1.12; font-weight:500; color:#f4f4f4; letter-spacing:-1.2px; }
+.app-lens .swipe-categories { margin:0 0 22px; gap:7px; }
+.app-lens .swipe-categories button { min-height:42px; padding:9px 12px; color:#bcbcbc; border-color:#ffffff1c; background:#ffffff03; font-size:11px; }
+.app-lens .swipe-categories button[aria-pressed=true] { color:#2d2d2d; background:#efefef; border-color:#ffffff65; box-shadow:inset 0 1px #ffffff8c; }
+.app-lens .swipe-deck { margin:0 0 12px; }
+.app-lens .swipe-card-back { inset:7px 9px -7px; border-radius:31px; transform:rotate(1.5deg); background:#313131; border-color:#ffffff24; }
+.app-lens .swipe-card-back img { opacity:.66; filter:blur(1px); }
+.app-lens .swipe-destination { height:clamp(380px,calc(100svh - 294px),610px); border-radius:31px; border-color:#ffffff3a; background:#2c2c2c; box-shadow:0 16px 42px #0003,inset 0 1px #fff2; transition:transform .42s cubic-bezier(.2,.7,.2,1),opacity .3s ease; }
+.app-lens .swipe-destination.dragging { transition:none; }
+.app-lens .swipe-destination.exiting { transition:transform .3s cubic-bezier(.4,0,.8,.2),opacity .3s ease; }
+.app-lens .swipe-photo-shade { background:linear-gradient(180deg,#0e0e0e26,transparent 36%,#0c0c0c42 59%,#101010e0 100%); }
+.app-lens .swipe-card-top { inset:16px 16px auto; }
+.app-lens .swipe-card-top > span { color:#f1f1f1; background:#1a1a1a25; border-color:#ffffff33; backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); box-shadow:inset 0 1px #ffffff20; padding:8px 11px; }
+.app-lens .swipe-card-top i { color:#d6d6d6; }
+.app-lens .swipe-card-top > button { background:linear-gradient(145deg,#ffffff1b,#17171735); border-color:#ffffff50; box-shadow:inset 0 1px #ffffff35; backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); }
+.app-lens .swipe-card-top > button[aria-pressed=true] { background:#f0f0f0e3; color:#2d2d2d; }
+.app-lens .swipe-card-copy { left:23px; right:23px; bottom:19px; }
+.app-lens .swipe-window { color:#e8e8e8; font-size:10px; letter-spacing:.06em; margin-bottom:9px; }
+.app-lens .swipe-card-copy h2 { font-family:'Iowan Old Style',Baskerville,Georgia,serif; font-size:51px; line-height:1.02; font-weight:500; letter-spacing:-1.8px; margin:0 0 12px; }
+.app-lens .swipe-card-copy h3 { color:#eeeeee; font-size:16px; line-height:1.35; font-weight:500; max-width:260px; }
+.app-lens .swipe-card-copy > p { color:#c5c5c5; font-size:12px; line-height:1.65; margin-top:10px; margin-bottom:20px; }
+.app-lens .swipe-detail-row { padding-top:9px; border-color:#ffffff28; }
+.app-lens .swipe-detail-row > span { color:#dbdbdb; font-size:11px; }
+.app-lens .swipe-detail-row button { padding:10px 13px; min-height:44px; border-radius:99px; color:#f6f6f6; border:1px solid #ffffff36; background:linear-gradient(135deg,#ffffff14,#ffffff04); backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); box-shadow:inset 0 1px #ffffff1e; }
+
+/* Detail: an editorial photograph gives way to a calm, readable travel brief. */
+.app-lens.detail-lens-shell .detail-page { padding-bottom:0; background:#111515; }
+.app-lens.detail-lens-shell .activity-detail-hero { height:clamp(435px,63svh,560px); background:#202020; }
+.app-lens.detail-lens-shell .activity-detail-hero > img { transform:scale(1); animation:discovery-scene-settle 1.15s cubic-bezier(.2,.65,.2,1) both; }
+.app-lens.detail-lens-shell .activity-detail-hero__light { opacity:.3; }
+.app-lens.detail-lens-shell .activity-detail-hero__shade { background:linear-gradient(180deg,#0e0e0e2c,transparent 34%,#10101022 54%,#111515 100%); }
+.app-lens.detail-lens-shell .activity-detail-glass-button { top:23px; width:44px; height:44px; border-color:#ffffff54; background:linear-gradient(145deg,#ffffff1c,#1c1c1c2c); box-shadow:inset 0 1px #ffffff33,inset 0 -1px #ffffff13,0 7px 17px #0001; backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); }
+.app-lens.detail-lens-shell .activity-detail-back { left:22px; }
+.app-lens.detail-lens-shell .activity-detail-save { right:22px; }
+.app-lens.detail-lens-shell .activity-detail-save.saved { background:#eeeeeee6; color:#2e2e2e; }
+.app-lens.detail-lens-shell .activity-detail-hero__copy { bottom:65px; left:24px; right:24px; text-align:left; }
+.app-lens.detail-lens-shell .activity-detail-hero__copy > small { color:#e8e8e8; font-size:11px; font-weight:500; letter-spacing:.04em; }
+.app-lens.detail-lens-shell .activity-detail-hero__copy h1 { max-width:none; margin:12px 0 16px; text-align:left; font-family:'Iowan Old Style',Baskerville,Georgia,serif; font-size:43px; line-height:1.03; letter-spacing:-1.45px; font-weight:500; color:#f5f5f5; text-shadow:0 3px 22px #0005; text-wrap:balance; }
+.app-lens.detail-lens-shell .activity-detail-hero__copy p { justify-content:flex-start; color:#d2d2d2; font-size:12px; line-height:1.5; }
+.app-lens.detail-lens-shell .activity-detail-sheet { overflow:visible; margin-top:-31px; padding:0 22px 132px; border:0; border-radius:0; background:none; box-shadow:none; }
+.app-lens.detail-lens-shell .activity-detail-sheet::before,
+.app-lens.detail-lens-shell .activity-detail-sheet::after { content:none; }
+.app-lens.detail-lens-shell .activity-detail-overview { gap:0; }
+.app-lens.detail-lens-shell .activity-detail-facts { min-height:111px; border-radius:24px; border:1px solid #ffffff38; background:linear-gradient(135deg,#ffffff13,#ffffff03); box-shadow:inset 0 1px #ffffff29,inset 0 -1px #ffffff09; backdrop-filter:blur(7px) saturate(115%); -webkit-backdrop-filter:blur(7px) saturate(115%); }
+.app-lens.detail-lens-shell .activity-detail-facts > div { padding:16px 12px; }
+.app-lens.detail-lens-shell .activity-detail-facts > div + div::before { background:#ffffff17; top:20px; bottom:20px; }
+.app-lens.detail-lens-shell .activity-detail-facts svg { color:#dddddd; margin-bottom:11px; }
+.app-lens.detail-lens-shell .activity-detail-facts small { color:#b0b0b0; font-size:8px; line-height:1.5; letter-spacing:0; text-transform:none; overflow:visible; }
+.app-lens.detail-lens-shell .activity-detail-facts strong { color:#f1f1f1; font-size:11px; line-height:1.45; font-weight:500; margin-top:5px; overflow:visible; }
+.app-lens.detail-lens-shell .activity-detail-actions { grid-template-columns:1fr; margin:15px 0 0; }
+.app-lens.detail-lens-shell .activity-detail-actions button { min-height:52px; border-radius:99px; font-size:14px; font-weight:550; }
+.app-lens.detail-lens-shell .activity-detail-primary { color:#2d2d2d; background:#efefef; border-color:#ffffff73; box-shadow:inset 0 1px #fff9,0 7px 20px #0002; }
+.app-lens.detail-lens-shell .activity-detail-primary svg { width:18px; }
+.app-lens.detail-lens-shell .activity-why-now { padding:29px 1px 0; }
+.app-lens.detail-lens-shell .activity-why-now h2 { font-size:29px; line-height:1.1; font-weight:500; letter-spacing:-.75px; margin:0 0 14px; color:#f2f2f2; }
+.app-lens.detail-lens-shell .activity-why-now > p { color:#bbbbbb; font-size:13px; line-height:1.8; }
+.app-lens.detail-lens-shell .activity-visit-notes { margin-top:23px; gap:18px; padding:0 0 24px; border-bottom:1px solid #ffffff16; }
+.app-lens.detail-lens-shell .activity-visit-notes > span { background:none; border:0; padding:0; gap:8px; color:#d3d3d3; grid-template-columns:20px minmax(0,1fr); }
+.app-lens.detail-lens-shell .activity-visit-notes small { color:#acacac; font-size:10px; }
+.app-lens.detail-lens-shell .activity-visit-notes strong { color:#dddddd; font-size:12px; line-height:1.45; white-space:normal; margin-top:5px; }
+.app-lens.detail-lens-shell .activity-dna-card { padding:27px 0 0; margin:0; border:0; border-radius:0; background:none; box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none; }
+.app-lens.detail-lens-shell .activity-dna-card::before,
+.app-lens.detail-lens-shell .activity-dna-card::after { content:none; }
+.app-lens.detail-lens-shell .activity-dna-card__heading { grid-template-columns:35px minmax(0,1fr); gap:12px; padding-bottom:18px; border-color:#ffffff16; }
+.app-lens.detail-lens-shell .activity-dna-card__heading > span { width:35px; height:35px; }
+.app-lens.detail-lens-shell .activity-dna-card__heading .activity-dna-orb { width:29px; height:29px; }
+.app-lens.detail-lens-shell .activity-dna-card__heading small { color:#adadad; font-size:8px; letter-spacing:.1em; }
+.app-lens.detail-lens-shell .activity-dna-card__heading h2 { font-family:inherit; font-size:18px; line-height:1.3; color:#eeeeee; letter-spacing:-.4px; font-weight:550; }
+.app-lens.detail-lens-shell .activity-dna-list { padding-top:6px; gap:0; }
+.app-lens.detail-lens-shell .activity-dna-list > div { min-height:91px; grid-template-columns:31px minmax(0,1fr); gap:12px; padding:17px 0; }
+.app-lens.detail-lens-shell .activity-dna-list > div + div { border-color:#ffffff12; }
+.app-lens.detail-lens-shell .activity-dna-list > div > span { width:31px; height:38px; background:none; border:0; color:#cdcdcd; }
+.app-lens.detail-lens-shell .activity-dna-list strong { font-size:15px; line-height:1.4; font-weight:500; color:#ececec; }
+.app-lens.detail-lens-shell .activity-dna-list small { font-size:12px; line-height:1.6; margin-top:7px; color:#b3b3b3; }
+.app-lens.detail-lens-shell .activity-detail-demo-note { margin:16px 0 0; font-size:10px; line-height:1.7; color:#959595; }
+.app-lens.detail-lens-shell .activity-detail-sheet > .fine-print { margin-top:17px; line-height:1.7; color:#b2b2b2; }
+
+.app-lens :is(.discovery-lens-page,.season-swipe-page,.detail-page) :is(button,a,summary):focus-visible { outline:2px solid #eeecff; outline-offset:4px; }
+@keyframes discovery-atmosphere-in { from { opacity:0; } to { opacity:.16; } }
+@keyframes discovery-scene-settle { from { transform:scale(1.055); } to { transform:scale(1); } }
+@media (max-width:360px) {
+  .app-lens .discovery-lens-page { padding:23px 17px 126px; }
+  .app-lens .discovery-lens-heading { gap:11px; }
+  .app-lens .discovery-lens-heading h1 { font-size:35px; }
+  .app-lens .discovery-lens-heading p { font-size:11px; }
+  .app-lens .discovery-lens-page .discover-search { padding-inline:12px; }
+  .app-lens .discovery-lens-page .discover-search input { font-size:13px; }
+  .app-lens .activity-card--ticket { height:302px; }
+  .app-lens .discovery-lens-page .activity-card--ticket:first-child { height:362px; }
+  .app-lens .activity-card--ticket .activity-card-copy { left:18px; right:18px; bottom:94px; }
+  .app-lens .activity-card--ticket .activity-card-copy strong { font-size:28px; }
+  .app-lens .activity-card--ticket .activity-card-copy > span { font-size:10px; }
+  .app-lens .season-swipe-page { padding:22px 17px 124px; }
+  .app-lens .swipe-title { font-size:29px; }
+  .app-lens .swipe-topbar { gap:8px; }
+  .app-lens .swipe-categories button { padding-inline:10px; }
+  .app-lens .swipe-card-copy { left:19px; right:19px; }
+  .app-lens .swipe-card-copy h2 { font-size:44px; }
+  .app-lens .swipe-card-copy h3 { font-size:15px; }
+  .app-lens .swipe-detail-row > span { font-size:10px; }
+  .app-lens .swipe-detail-row button { padding-inline:10px; }
+  .app-lens.detail-lens-shell .activity-detail-hero__copy { left:20px; right:20px; bottom:62px; }
+  .app-lens.detail-lens-shell .activity-detail-hero__copy h1 { font-size:36px; }
+  .app-lens.detail-lens-shell .activity-detail-sheet { padding-inline:18px; }
+  .app-lens.detail-lens-shell .activity-detail-facts > div { padding-inline:9px; }
+  .app-lens.detail-lens-shell .activity-detail-facts strong { font-size:10px; }
+  .app-lens.detail-lens-shell .activity-why-now h2 { font-size:27px; }
+}
+@media (max-height:760px) { .app-lens .swipe-card-copy > p { display:none; } }
+@media (prefers-reduced-motion:reduce) {
+  .app-lens .season-lens-atmosphere,.app-lens.detail-lens-shell .activity-detail-hero > img { animation:none; }
+  .app-lens .swipe-destination,.app-lens .swipe-destination.exiting,.app-lens .activity-card img { transition:none; }
+  .app-lens .activity-card:hover img { transform:none; }
+}
+@media (prefers-reduced-transparency:reduce) {
+  .app-lens .activity-card--ticket .activity-ticket-window,
+  .app-lens .swipe-card-top > span,.app-lens .swipe-detail-row button,
+  .app-lens.detail-lens-shell .activity-detail-facts { background:#2e2e2e; backdrop-filter:none; -webkit-backdrop-filter:none; }
+  .app-lens .activity-card .card-save,.app-lens .swipe-card-top > button,
+  .app-lens.detail-lens-shell .activity-detail-glass-button { background:#3a3a3a; backdrop-filter:none; -webkit-backdrop-filter:none; }
+  .app-lens .activity-card .card-save.saved,.app-lens .swipe-card-top > button[aria-pressed=true],
+  .app-lens.detail-lens-shell .activity-detail-glass-button.saved { background:#ededed; color:#242424; }
+}
+@supports not (backdrop-filter:blur(1px)) {
+  .app-lens .activity-card--ticket .activity-ticket-window,.app-lens.detail-lens-shell .activity-detail-facts { background:#2e2e2e; }
+}

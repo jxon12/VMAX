@@ -1,0 +1,136 @@
+/* Home uses the same clear optical material as Journey, with the photograph doing the work. */
+.journey-home.app-lens { color:#f6f5f2; background:#111515; border-color:#ffffff1d; }
+.journey-home.app-lens::after { display:none; }
+.journey-home.app-lens .home-lens-hero { position:relative; height:570px; overflow:hidden; isolation:isolate; background:#354041; }
+.journey-home.app-lens .home-lens-hero-content { position:relative; display:flex; flex-direction:column; width:100%; height:100%; padding:24px 22px 28px; }
+.journey-home.app-lens .hero-photo { inset:-8px -5px auto; width:calc(100% + 10px); height:calc(100% + 18px); object-fit:cover; object-position:center 40%; filter:saturate(.94) contrast(1.01); }
+.journey-home.app-lens .hero-shade { height:100%; background:linear-gradient(180deg,#070c133d 0%,#080f1010 32%,#0b11131a 45%,#0f14143d 64%,#1115159e 93%,#111515 100%); }
+.journey-home.app-lens .topbar { position:relative; z-index:2; flex:none; min-height:44px; }
+.journey-home.app-lens .wordmark { min-height:44px; padding-left:0; }
+.journey-home.app-lens .wordmark-logo { width:110px; height:36px; filter:drop-shadow(0 1px 8px #0003); }
+.journey-home.app-lens .home-header-group { min-width:72px; min-height:44px; display:flex; align-items:center; gap:9px; padding:5px 11px 5px 7px; border:1px solid #ffffff5c; border-radius:99px; color:#fff; background:#ffffff07; box-shadow:inset 0 1px #ffffff55,0 6px 20px #0001; backdrop-filter:blur(4px) saturate(115%); -webkit-backdrop-filter:blur(4px) saturate(115%); }
+.journey-home.app-lens .home-header-group .home-mini-members { padding-left:4px; }
+.journey-home.app-lens .home-header-group .home-mini-members i { width:27px; height:27px; border-color:#ffffff56; background:#16232655; font-size:9px; backdrop-filter:none; }
+.journey-home.app-lens .home-header-group .home-mini-members i:nth-child(2) { background:#7d828255; }
+.journey-home.app-lens .create-trip-button { width:44px; height:44px; }
+.journey-home.app-lens .home-lens-hero .season-hero { top:0; margin-top:auto; padding:0; }
+.journey-home.app-lens .home-hero-eyebrow { margin:0 0 13px; font-size:9px; font-weight:450; letter-spacing:1.8px; color:#ffffffbd; text-shadow:0 1px 10px #0003; }
+.journey-home.app-lens .home-personal-hero h1,.journey-home.app-lens .season-hero h1 { max-width:350px; font-family:"Iowan Old Style",Baskerville,Georgia,serif; font-size:54px; font-weight:400; line-height:.97; letter-spacing:-1.9px; color:#fffef9; text-shadow:0 2px 22px #0003; }
+.journey-home.app-lens .home-trip-dates { flex-wrap:wrap; margin:16px 0 0; gap:8px; font-size:12px; line-height:1.5; color:#f4f3edcf; }
+.journey-home.app-lens .home-hero-link { display:flex; align-items:center; gap:11px; width:100%; min-height:69px; margin-top:21px; padding:13px 15px; border:1px solid #ffffff69; border-radius:25px; text-align:left; background:linear-gradient(135deg,#ffffff14,#ffffff03 58%,#ffffff09); box-shadow:inset 0 1px #ffffff65,inset 0 -1px #ffffff19,0 8px 25px #0002; backdrop-filter:blur(4px) saturate(115%); -webkit-backdrop-filter:blur(4px) saturate(115%); }
+.journey-home.app-lens .home-hero-journey-icon { display:grid; place-items:center; width:31px; height:31px; flex:none; color:#fff; }
+.journey-home.app-lens .home-hero-journey-copy { display:grid; gap:4px; flex:1; }
+.journey-home.app-lens .home-hero-journey-copy small { font-size:10px; line-height:1.3; color:#eceee5bc; }
+.journey-home.app-lens .home-hero-journey-copy strong { font-size:14px; font-weight:520; letter-spacing:-.15px; color:#fff; }
+.journey-home.app-lens .home-hero-link .home-hero-journey-arrow { display:grid; place-items:center; width:28px; height:28px; margin:0; flex:none; border:1px solid #ffffff50; border-radius:50%; color:#fff; box-shadow:inset 0 1px #ffffff20; }
+.journey-home.app-lens .home-lens-body { min-height:0; padding:0 22px 138px; }
+.journey-home.app-lens .section-heading { min-height:40px; gap:12px; }
+.journey-home.app-lens .section-heading h2 { color:#f2f2ee; font-size:19px; line-height:1.2; font-weight:570; letter-spacing:-.45px; }
+.journey-home.app-lens .home-section-note { color:#919c99; font-size:10px; }
+.journey-home.app-lens .home-text-button { min-height:44px; padding:10px 0 10px 9px; color:#b0bab7; font-size:11px; line-height:1.3; }
+.journey-home.app-lens .home-updates { margin-top:16px; }
+.journey-home.app-lens .home-update-rail { gap:12px; margin:8px -22px 0 0; padding:0 22px 8px 0; scroll-padding-inline-start:0; }
+.journey-home.app-lens .home-update-card { position:relative; isolation:isolate; overflow:hidden; flex:0 0 88%; min-height:286px; padding:14px; border:1px solid #ffffff31; border-radius:27px; background:#26302d; box-shadow:inset 0 1px #ffffff30,0 8px 22px #0001; }
+.journey-home.app-lens .home-notice-bg { z-index:-2; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 18%; filter:grayscale(1) contrast(.94) brightness(.64); transform:none; }
+.journey-home.app-lens .home-notice-cover::before { background:none; mix-blend-mode:normal; }
+.journey-home.app-lens .home-notice-cover::after,.journey-home.app-lens .home-update-route::after { content:''; position:absolute; z-index:-1; inset:0; pointer-events:none; background:linear-gradient(180deg,#0a111126,#11151505 34%,#1115152e 49%,#111515bb 100%); }
+.journey-home.app-lens .home-update-top { position:relative; z-index:1; display:flex; align-items:center; gap:7px; width:100%; min-height:27px; padding:2px 1px; color:#f3f5ee; font-size:10px; line-height:1.3; text-shadow:0 1px 7px #0008; }
+.journey-home.app-lens .home-update-top>svg:last-child { color:#fff; margin-left:auto; }
+.journey-home.app-lens .home-status-dot { width:4px; height:4px; background:#e1ddec; box-shadow:0 0 8px #ded9ff4a; }
+.journey-home.app-lens .home-update-caption { position:relative; display:flex; flex-direction:column; width:100%; margin-top:auto; padding:15px 14px 13px; border:1px solid #ffffff3b; border-radius:21px; background:linear-gradient(130deg,#ffffff0f,#ffffff03); box-shadow:inset 0 1px #ffffff37,inset 0 -1px #ffffff0a; backdrop-filter:blur(5px) saturate(105%); -webkit-backdrop-filter:blur(5px) saturate(105%); }
+.journey-home.app-lens .home-update-caption .home-update-main.home-update-main-copy { display:block; margin:0; }
+.journey-home.app-lens .home-update-main-copy>span:last-child>strong,.journey-home.app-lens .home-update-caption>strong { display:block; margin:0; color:#fcfaf3; font-family:Georgia,serif; font-size:23px; font-weight:400; line-height:1.05; letter-spacing:-.55px; text-shadow:0 1px 12px #0003; }
+.journey-home.app-lens .home-update-main-copy>span:last-child>small,.journey-home.app-lens .home-arrival-caption-copy { display:block; margin-top:10px; color:#d7ddd7; font-size:11px; line-height:1.45; text-shadow:0 1px 8px #0004; }
+.journey-home.app-lens .home-update-caption .home-update-footer { display:flex; align-items:center; gap:7px; margin-top:17px; color:#f0eee9; font-size:10px; line-height:1.3; }
+.journey-home.app-lens .home-demo-tag { margin-left:auto; font-size:8px; line-height:1.4; color:#bfc7c0; }
+.journey-home.app-lens .home-arrival-cover { position:absolute; z-index:-2; inset:0; width:100%; height:100%; margin:0; border:0; border-radius:0; background:#768383; }
+.journey-home.app-lens .home-arrival-cover img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 33%; filter:saturate(.68) contrast(1.01) brightness(.77); }
+.journey-home.app-lens .home-next,.journey-home.app-lens .home-wallet { margin-top:28px; }
+.journey-home.app-lens .home-next-group { overflow:visible; margin-top:3px; border:0; border-radius:0; background:none; box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none; }
+.journey-home.app-lens .home-next-group button { gap:15px; border:0; border-radius:0; background:none; }
+.journey-home.app-lens .home-next-group .home-next-stop { min-height:127px; padding:12px 0 20px; }
+.journey-home.app-lens .home-next-image { flex:none; width:75px; height:91px; }
+.journey-home.app-lens .home-next-image img { width:100%; height:100%; border:1px solid #ffffff1c; border-radius:20px; filter:saturate(.84); box-shadow:0 5px 14px #0001; }
+.journey-home.app-lens .home-next-image-icon { position:absolute; display:grid; place-items:center; right:6px; bottom:6px; width:25px; height:25px; border:1px solid #ffffff40; border-radius:50%; background:#11151519; backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); color:#fff; }
+.journey-home.app-lens .home-next-copy { min-width:0; flex:1; gap:7px; }
+.journey-home.app-lens .home-next-copy>small { color:#b1b8ae; font-size:11px; line-height:1.4; }
+.journey-home.app-lens .home-next-copy>strong { color:#f2f3ed; font-size:16px; line-height:1.32; font-weight:540; letter-spacing:-.25px; }
+.journey-home.app-lens .home-next-copy>span { color:#9ca7a3; font-size:12px; line-height:1.5; }
+.journey-home.app-lens .home-next-group button>svg:last-child { width:16px; color:#a4b1ab; }
+.journey-home.app-lens .home-next-group .home-next-prep { padding:19px 0; gap:14px; border-bottom:1px solid #ffffff16; }
+.journey-home.app-lens .home-next-prep::before { left:0; right:0; background:#ffffff16; }
+.journey-home.app-lens .home-prep-progress { width:37px; height:37px; background:conic-gradient(#c0d0c7 var(--progress),#ffffff19 0); color:#dce2df; }
+.journey-home.app-lens .home-prep-progress::before { inset:1px; background:#111515; }
+.journey-home.app-lens .home-next-prep>span:nth-child(2) { min-width:0; flex:1; gap:6px; }
+.journey-home.app-lens .home-next-prep strong { color:#e3e9e3; font-size:13px; line-height:1.3; font-weight:500; }
+.journey-home.app-lens .home-next-prep small { color:#94a19c; font-size:11px; line-height:1.4; }
+/* The wallet stays tactile paper. Clear glass is for controls, not every object. */
+.journey-home.app-lens .home-pass-stack { margin-top:14px; }
+.journey-home.app-lens .home-pass { padding:17px 18px 14px; border-color:#ffffff8c; border-radius:20px; background:linear-gradient(115deg,#edece5,#d9ddd5); color:#303a35; box-shadow:inset 0 1px #ffffffc7,0 -4px 18px #0002,0 13px 26px #0002; }
+.journey-home.app-lens .home-pass:nth-child(2) { background:linear-gradient(115deg,#e4e7df,#d1d9d0); }
+.journey-home.app-lens .home-pass:nth-child(3) { background:linear-gradient(115deg,#dce2d9,#cbd5ca); }
+.journey-home.app-lens .home-pass-top { color:#3e4a41; font-size:9px; }
+.journey-home.app-lens .home-pass-top>small { color:#66756a; font-size:8px; }
+.journey-home.app-lens .home-pass-title { font-size:24px; letter-spacing:-.5px; }
+.journey-home.app-lens .home-pass-subtitle { color:#657064; font-size:10px; line-height:1.4; }
+.journey-home.app-lens .home-pass-tear { border-color:#5c6b5f40; }
+.journey-home.app-lens .home-pass-tear::before,.journey-home.app-lens .home-pass-tear::after { background:#111515; }
+.journey-home.app-lens .home-pass-bottom { font-size:9px; color:#536151; }
+.journey-home.app-lens .home-wallet-import { min-height:44px; margin-top:10px; color:#98a59d; font-size:10px; line-height:1.4; gap:7px; }
+.journey-home.app-lens .home-wallet-empty { display:flex; width:100%; min-height:112px; align-items:center; gap:14px; padding:20px 0; border:0; border-block:1px solid #ffffff1d; background:none; text-align:left; }
+.journey-home.app-lens .home-wallet-empty>span { flex:1; display:grid; gap:7px; }
+.journey-home.app-lens .home-wallet-empty strong { font-size:15px; font-weight:520; }
+.journey-home.app-lens .home-wallet-empty small { font-size:12px; color:#9caaa3; }
+.journey-home.app-lens .home-open-pass { color:#303a35; background:linear-gradient(115deg,#ecefe5,#d0d9cb); border:1px solid #fff6; border-radius:23px; }
+.journey-home.app-lens .home-open-pass p { color:#66715f; }
+.journey-home.app-lens .home-open-pass>small { color:#6e7d67; }
+.journey-home.app-lens .home-open-pass .home-pass-tear::before,.journey-home.app-lens .home-open-pass .home-pass-tear::after { background:#1a201e; }
+.journey-home.app-lens .home-detail-sheet>p { color:#c0cbc5; }
+.journey-home.app-lens .home-detail-sheet>.home-detail-muted { color:#94a29a; }
+.journey-home.app-lens .home-prep-context span { color:#cbd3cd; background:#ffffff06; border:1px solid #ffffff10; }
+.journey-home.app-lens .home-smart-list small { color:#aab8ae; }
+.journey-home.app-lens .home-smart-list em { color:#bac9be; }
+.journey-home.app-lens .home-smart-list input { accent-color:#bccdbf; }
+.journey-home.app-lens .home-smart-list .is-ready strong { color:#95a198; }
+.journey-home.app-lens .home-primary { color:#26332b; background:#e1e8de; }
+.journey-home.app-lens .home-secondary { color:#d2dcd2; background:#ffffff06; border-color:#ffffff1e; }
+.journey-home.app-lens .home-arrival-status { border-color:#ffffff1c; background:#ffffff05; }
+.journey-home.app-lens .home-arrival-status>svg,.journey-home.app-lens .home-guide-source a { color:#c6d5c7; }
+.journey-home.app-lens .home-guide-source,.journey-home.app-lens .home-arrival-status small { color:#95a59a; }
+.journey-home.app-lens .home-guide-step>i { color:#c1d1c5; background:#ffffff06; border-color:#c1d1c53b; }
+.journey-home.app-lens .home-arrival-steps small { color:#a6b3a9; }
+.journey-home.app-lens .home-arrival-steps b { color:#c0cec2; }
+.journey-home.app-lens .home-arrival-steps li { border-color:#ffffff1c; border-radius:22px; background:#ffffff03; }
+.journey-home.app-lens .home-guide-photo em { background:#152019cc; color:#e5eee5; }
+.journey-home.app-lens .story-section:not(.home-updates) { margin-top:19px; }
+.journey-home.app-lens .story-card { border-radius:22px; border-color:#ffffff2c; }
+.journey-home.app-lens .soft-arrow { border-color:#ffffff30; background:#ffffff04; }
+.journey-home.app-lens .journey-card { border-radius:24px; border-color:#ffffff25; }
+.journey-home.app-lens .journey-arrow { color:#eff2ec; background:#ffffff14; border:1px solid #ffffff60; box-shadow:inset 0 1px #fff4,0 5px 18px #0002; backdrop-filter:blur(5px); -webkit-backdrop-filter:blur(5px); }
+@media(max-width:360px) {
+  .journey-home.app-lens .home-lens-hero { height:520px; }
+  .journey-home.app-lens .home-lens-hero-content { padding:20px 19px 24px; }
+  .journey-home.app-lens .home-personal-hero h1,.journey-home.app-lens .season-hero h1 { font-size:47px; }
+  .journey-home.app-lens .home-hero-eyebrow { font-size:8px; }
+  .journey-home.app-lens .home-trip-dates { font-size:11px; }
+  .journey-home.app-lens .home-hero-link { margin-top:18px; padding:12px; border-radius:23px; }
+  .journey-home.app-lens .home-hero-journey-copy strong { font-size:13px; }
+  .journey-home.app-lens .home-lens-body { padding-inline:19px; }
+  .journey-home.app-lens .home-update-rail { margin-right:-19px; padding-right:19px; gap:10px; }
+  .journey-home.app-lens .home-update-card { flex-basis:93%; padding:12px; min-height:281px; }
+  .journey-home.app-lens .home-update-caption { padding:14px 12px 12px; }
+  .journey-home.app-lens .home-update-main-copy>span:last-child>strong,.journey-home.app-lens .home-update-caption>strong { font-size:22px; }
+  .journey-home.app-lens .home-next-group button { gap:11px; }
+  .journey-home.app-lens .home-next-image { width:65px; height:81px; }
+  .journey-home.app-lens .home-next-copy>strong { font-size:15px; }
+  .journey-home.app-lens .home-next-copy>span { font-size:11px; }
+  .journey-home.app-lens .home-next-prep strong { font-size:12px; }
+  .journey-home.app-lens .home-next-prep small { font-size:10px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .journey-home.app-lens .home-pass,.journey-home.app-lens .home-pass-stack { transition:none; }
+  .journey-home.app-lens .home-pass:hover { transform:none; }
+}
+@media(prefers-reduced-transparency:reduce) {
+  .journey-home.app-lens .home-hero-link,.journey-home.app-lens .home-header-group,.journey-home.app-lens .home-update-caption { background:#24312beF; backdrop-filter:none; -webkit-backdrop-filter:none; }
+}

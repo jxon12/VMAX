@@ -1,0 +1,14 @@
+export type TripAddition = { day: number; destination: string; time: string; duration?: number }
+export type Preferences = { mobility: string[]; dietary: string[]; pace: string; interests: string[]; travellerTypes?: string[] }
+export type TripRequest = Preferences & { destination: string; startDate: string; endDate: string; travellers: number; budgetPerPerson: number; seedActivityId?: string }
+export type Stop = { id: string; activityId?: string; title: string; time: string; duration: number; image?: string; kind: 'activity' | 'meal' | 'rest' | 'arrival'; cost: number; done: boolean; participantIds?: string[]; proposalId?: string }
+export type TripDay = { number: number; stops: Stop[]; softened?: boolean }
+export type AgentPreferences = { shareAvailability: boolean; shareArea: boolean; shareBudget: boolean; autoApproveReunion: boolean; availableFrom: string; area: string; mealBudget: number }
+export type Member = { id: string; name: string; color: string; agent?: AgentPreferences }
+export type ChatMessage = { id: string; sender: string; text: string; time: string; date?: string; proposal?: boolean; day?: number; proposalId?: string }
+export type JourneyProposal = { id: string; kind: 'reunion' | 'museum'; status: 'pending' | 'accepted' | 'declined'; day: number; time: string; title: string; location: string; participantIds: string[]; approvedBy: string[]; estimatedCost: number; reasons: string[]; source?: { label: string; url: string; checkedAt: string }; previousStops?: { day: number; stops: Stop[] }[]; appliedStop?: Stop }
+export type ExpenseCategory = 'Stay' | 'Food' | 'Transport' | 'Activities'
+export type Expense = { id: string; title: string; amount: number; category: ExpenseCategory; paidBy: string; splitWith: string[]; receiptId?: string }
+export type ReceiptRecord = { id: string; title: string; paidBy: string; items: { id: string; label: string; amount: string; weights: Record<string, number> }[] }
+export type TripDocument = { id: string; title: string; detail: string; ready: boolean; sample?: boolean }
+export type Trip = TripRequest & { id: string; city: string; country: string; image: string; days: TripDay[]; members: Member[]; messages: ChatMessage[]; readMessages: number; expenses: Expense[]; checklist: { id: string; label: string; done: boolean }[]; documents: TripDocument[]; activeDay: number; activeTab: 'overview' | 'plan' | 'map' | 'group' | 'budget'; proposals?: JourneyProposal[]; receipts?: ReceiptRecord[]; demoPhase?: 'before' | 'during'; agentScenarioVersion?: number; splitScenarioVersion?: number }

@@ -1,0 +1,115 @@
+/* Route and Budget: fewer surfaces, clear next actions, restrained liquid glass. */
+.journey-glass :is(.jg-route,.jg-budget){font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif}
+.jg-utility-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 0 20px}
+.journey-glass .jg-utility-heading h2{font-family:inherit;font-size:27px;font-weight:650;line-height:1.14;letter-spacing:-1px;margin:0;color:#f4f5f9}
+.jg-utility-heading>div{min-width:0}
+.jg-utility-heading p{margin:8px 0 0;font-size:12px;line-height:1.5;color:var(--jg-muted,#b0b5c3)}
+.jg-mode-pill{display:flex;align-items:center;gap:5px;flex:none;padding:8px 10px;border-radius:20px;background:#ffffff08;border:1px solid #ffffff14;color:#c4c6d4;font-size:10px;white-space:nowrap}
+.jg-utility-section-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:25px 0 12px}
+.journey-glass .jg-utility-section-heading h3{font-family:inherit;font-size:18px;font-weight:620;letter-spacing:-.45px;margin:0;color:#f1f2f7}
+.jg-utility-section-heading>button{display:flex;align-items:center;justify-content:center;gap:5px;min-height:44px;min-width:44px;background:none;padding:8px 0 8px 10px;color:var(--jg-accent,#cfccf9);font-size:12px;white-space:nowrap}
+.jg-utility-section-heading>span{font-size:10px;color:var(--jg-quiet,#8992a4)}
+.jg-utility-note{color:var(--jg-muted,#b0b5c3);margin:14px 0 0}
+.jg-utility-note>summary,.jg-category-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:10px;list-style:none;min-height:44px;cursor:pointer;font-size:12px;color:#b5bbcc}
+.jg-utility-note>summary::-webkit-details-marker,.jg-category-disclosure>summary::-webkit-details-marker{display:none}
+.jg-utility-note>summary>svg,.jg-category-disclosure>summary>svg,.jg-expand-expenses>svg{flex:none;transition:transform .18s ease}
+.jg-utility-note[open]>summary>svg,.jg-category-disclosure[open]>summary>svg,.jg-expand-expenses[aria-expanded=true]>svg{transform:rotate(180deg)}
+.jg-utility-note>p{margin:0;padding:1px 0 13px;font-size:12px;line-height:1.7;color:#a7afc1}
+.jg-utility-note>summary:focus-visible,.jg-category-disclosure>summary:focus-visible{outline:2px solid #c4b8ff;outline-offset:3px;border-radius:8px}
+
+/* Route: the destination and handoff live on the map instead of repeating below it. */
+.journey-glass .jg-route .jg-route-map{height:355px;margin:0;border-radius:27px;border:1px solid #ffffff23;box-shadow:0 14px 35px #0003;background:#182431}
+.jg-route .jg-route-map>img{filter:saturate(.63) brightness(.72);object-position:center}
+.jg-route .jg-route-map .jr-map-shade{background:linear-gradient(180deg,#0e121d9e,transparent 38%,#10141c30)}
+.jg-map-heading{position:absolute;z-index:2;top:22px;left:22px;right:22px}
+.jg-map-heading strong{display:block;font-size:23px;font-weight:600;line-height:1.2;letter-spacing:-.7px;color:#f6f7fa;text-shadow:0 1px 8px #0006;overflow-wrap:anywhere}
+.jg-map-heading>span{display:block;font-size:10px;line-height:1.5;color:#d2d5df;margin-top:6px}
+.jg-map-destination{position:absolute;z-index:2;bottom:12px;left:12px;right:12px;padding:17px;border:1px solid #ffffff34;border-radius:21px;background:linear-gradient(145deg,#38414acf,#1d222bbd);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);box-shadow:inset 0 1px #ffffff0c,0 10px 25px #0003}
+.jg-map-destination-label{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#cdd0df;font-size:11px}
+.jg-map-destination-label>time{font-variant-numeric:tabular-nums;color:#ded9fa;font-weight:600}
+.journey-glass .jg-map-destination h3{font-family:inherit;letter-spacing:-.45px;font-size:19px;line-height:1.22;margin:9px 0 7px;font-weight:620;color:#fafaff;overflow-wrap:anywhere}
+.jg-map-destination>p{margin:0;font-size:11px;line-height:1.5;color:#b4bdce}
+.jg-map-actions{display:flex;gap:8px;margin-top:16px}
+.jg-map-actions>button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border-radius:14px;padding:11px 12px;font-family:inherit;font-size:12px;font-weight:600;line-height:1.3}
+.jg-directions-button{flex:1;min-width:0;color:#242335;background:linear-gradient(160deg,#f7f6ff,#ddd9f5);box-shadow:inset 0 1px #fff9,0 3px 10px #0002}
+.jg-visited-button{color:#e3e1f2;border:1px solid #ffffff25;background:#ffffff0a}
+.jg-map-actions svg{flex:none}
+.journey-glass .jg-route-stops{padding:3px 16px;border:1px solid var(--jg-line,#ffffff24);border-radius:23px;background:var(--jg-glass,linear-gradient(145deg,#ffffff16,#ffffff06));box-shadow:var(--jg-shadow,inset 0 1px #fff1,0 8px 24px #0002);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+.journey-glass .jg-route-stops li{padding:15px 0;min-height:75px;gap:11px;border-color:#ffffff0f}
+.journey-glass .jg-route-stops li:last-child{border-bottom:0}
+.journey-glass .jg-route-stops li>span{flex:none;height:26px;width:26px;font-size:11px;border:1px solid #ffffff16;background:#ffffff08;color:#aeb5c9}
+.journey-glass .jg-route-stops li.next>span{background:#c6bff523;border-color:#c6bff539;color:#dfdafa}
+.journey-glass .jg-route-stops li strong{font-size:14px;line-height:1.4;font-weight:570}
+.journey-glass .jg-route-stops li small{font-size:11px;line-height:1.5;color:#a6aec0;margin-top:5px}
+.journey-glass .jg-route-stops li b{font-size:9px;line-height:1.3;letter-spacing:0;color:#d2cdec;font-weight:500}
+.journey-glass .jg-route-stops li.is-visited strong{color:#a8afbf}
+.journey-glass .jg-route-stops li.is-visited>span{color:#bad6ce}
+.journey-glass .jg-route .ju-status{margin:12px 0 0;background:#ffffff08;border-color:#ffffff1a;color:#c3dcd4}
+.journey-glass .jg-route .ju-next-day{background:var(--jg-glass);border-color:var(--jg-line)}
+
+/* Budget: one summary, one expense group, one balance group. */
+.journey-glass :is(.jg-budget-summary,.jg-expenses-card,.jg-balance-card){border:1px solid var(--jg-line,#ffffff24);border-radius:25px;background:var(--jg-glass,linear-gradient(145deg,#ffffff16,#ffffff06));box-shadow:var(--jg-shadow,inset 0 1px #fff1,0 8px 24px #0002);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);overflow:hidden}
+.journey-glass .jg-budget-summary .j-budget-total{padding:23px 21px 20px}
+.journey-glass .jg-budget-summary .j-budget-total>span{font-size:12px;color:#bcc1d2}
+.journey-glass .jg-budget-summary .j-budget-total>strong{font-family:inherit;font-size:clamp(29px,8.7vw,39px);font-weight:570;line-height:1.15;letter-spacing:-1.5px;margin:12px 0 0;color:#f5f4ff;font-variant-numeric:tabular-nums}
+.journey-glass .jg-budget-summary .j-budget-total>strong.negative{color:#f0b6af}
+.jg-budget-summary .j-budget-track{height:4px;background:#ffffff0e;margin-top:23px}
+.jg-budget-summary .j-budget-track>i{background:linear-gradient(90deg,#a6a2cd,#d4cff1)}
+.jg-budget-figures{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:15px}
+.jg-budget-figures>p{margin:0!important;line-height:1.5!important}
+.jg-budget-figures span{display:block;font-size:10px;color:#a3abc0}
+.jg-budget-figures strong{display:block;margin-top:4px;font-size:13px;letter-spacing:0;font-weight:570;color:#e1e3ed;font-variant-numeric:tabular-nums}
+.jg-budget-figures>p+ p{text-align:right}
+.journey-glass .jg-budget .jg-receipt-entry{border:0;border-top:1px solid #ffffff13;border-radius:0;padding:17px 20px;background:#ffffff04;gap:12px;box-shadow:none;min-height:84px}
+.journey-glass .jg-receipt-entry .jr-scan-icon{height:38px;width:38px;border-radius:13px;color:#d0c9f1;border:1px solid #ffffff16;background:linear-gradient(135deg,#c1b5f620,#ffffff07);box-shadow:inset 0 1px #fff1}
+.journey-glass .jg-budget .jg-receipt-entry strong{font-family:inherit;font-size:14px;font-weight:590;line-height:1.4;letter-spacing:-.1px;margin:0}
+.journey-glass .jg-budget .jg-receipt-entry p{font-family:inherit;font-size:11px;line-height:1.5;color:#a9b0c3;margin:4px 0 0}
+.jg-receipt-entry>svg{flex:none;color:#bfc1d5}
+.journey-glass .jg-expenses-card{padding:0 17px;border-radius:23px}
+.journey-glass .jg-expenses-card .j-expense-list>button{padding:17px 0;min-height:76px;align-items:center;gap:13px;border-color:#ffffff0f}
+.journey-glass .jg-expenses-card .j-expense-list strong{font-size:14px;font-weight:570;line-height:1.35;color:#eeeff5}
+.journey-glass .jg-expenses-card .j-expense-list small{font-size:11px;line-height:1.45;color:#a4adbf;margin-top:5px}
+.journey-glass .jg-expenses-card .j-expense-list b{font-size:12px;font-weight:570;line-height:1.4;letter-spacing:-.2px;color:#d9ddea;font-variant-numeric:tabular-nums}
+.jg-expand-expenses{display:flex;align-items:center;justify-content:center;gap:9px;min-height:47px;padding:10px;width:100%;font-size:12px;background:none;color:#cdc7ef;border-bottom:1px solid #ffffff0e}
+.jg-category-disclosure>summary{min-height:49px;font-size:11px;color:#b5bed0}
+.jg-category-disclosure .j-budget-categories{padding-bottom:7px}
+.jg-category-disclosure .j-budget-categories>div:first-child{margin-top:1px}
+.jg-category-disclosure .j-budget-categories p{font-size:12px}
+.jg-category-disclosure .j-budget-categories p>span{color:#aeb7c9}
+.jg-category-disclosure .j-budget-categories strong{font-weight:550;color:#d7dce7}
+.journey-glass .jg-budget .jg-balance-card{padding:0 17px;margin-top:0;border-radius:23px}
+.journey-glass .jg-balance-card>div{min-height:73px;margin:0;padding:14px 0;border-bottom:1px solid #ffffff0f}
+.journey-glass .jg-balance-card>div:last-child{border-bottom:0}
+.journey-glass .jg-budget .jg-balance-card>div>span:first-child{font-size:13px;line-height:1.4;color:#e6e8f0;gap:11px}
+.jg-balance-card .j-avatar{flex:none;height:30px;width:30px;font-size:11px;font-style:normal;box-shadow:inset 0 1px #ffffff30}
+.journey-glass .jg-budget .jg-balance-card .jg-balance-amount{display:flex;flex:none;flex-direction:column;align-items:flex-end;gap:4px;min-width:0}
+.jg-balance-amount strong{font-size:13px;font-weight:570;white-space:nowrap;font-variant-numeric:tabular-nums}
+.jg-balance-amount strong.negative{color:#dfbec1}
+.jg-balance-amount strong.positive{color:#bdcbdc}
+.jg-balance-amount small{font-size:10px;font-weight:400;color:#a5aec0;line-height:1.4}
+
+/* Keep deeper utility sheets comfortable without turning caveats into hero copy. */
+.jg-utility-sheet header>button{min-width:44px;min-height:44px}
+.jg-utility-sheet .ju-sample-note{margin:17px 0;background:#ffffff05;border-color:#ffffff13}
+.jg-utility-sheet .ju-portion-row>input{min-height:44px}
+.jg-utility-sheet .ju-remove-item{min-height:44px}
+.jg-utility-sheet .ju-split-summary{background:linear-gradient(145deg,#edeaf8,#dcd9ef);border:1px solid #ffffff5e;box-shadow:inset 0 1px #fff5}
+.jg-utility-sheet .ju-maps-link{background:linear-gradient(145deg,#f2effd,#dbd7f1);border:1px solid #ffffff45}
+.jg-utility-sheet .ju-transfer-facts{margin:17px 0 12px;padding:9px 0}
+.jg-utility-sheet .ju-transfer-facts p{font-size:12px}
+.jg-utility-sheet .jg-utility-note{margin-top:10px}
+.jg-utility-sheet .j-primary{margin-top:14px}
+.jg-utility-sheet :is(button,a):focus-visible{outline:2px solid #c4b8ff;outline-offset:3px}
+@media(max-width:360px){
+  .journey-glass .jg-utility-heading h2{font-size:25px}
+  .jg-mode-pill{font-size:9px;padding:7px 9px}
+  .journey-glass .jg-route .jg-route-map{height:355px}
+  .jg-map-destination{left:9px;right:9px;bottom:9px;padding:15px}
+  .jg-map-actions>button{padding:11px 9px;font-size:11px}
+  .journey-glass .jg-map-destination h3{font-size:18px}
+  .journey-glass .jg-expenses-card .j-expense-list>button{gap:9px}
+  .journey-glass .jg-expenses-card .j-expense-list b{font-size:11px}
+  .journey-glass .jg-budget-summary .j-budget-total{padding:21px 18px 18px}
+}
+@media(prefers-reduced-motion:reduce){.jg-utility-note>summary>svg,.jg-category-disclosure>summary>svg,.jg-expand-expenses>svg{transition:none}}
+@supports not (backdrop-filter:blur(1px)){.jg-map-destination{background:#242a36}.journey-glass :is(.jg-budget-summary,.jg-expenses-card,.jg-balance-card,.jg-route-stops){background:#222634}}

@@ -1,0 +1,75 @@
+.season-swipe-page {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 100svh;
+  padding: 23px 23px 110px;
+  background: radial-gradient(ellipse at 100% 35%, #30475742, transparent 65%), #101923;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.swipe-topbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.swipe-topbar .j-icon-button { width: 44px; height: 44px; background: #ffffff07; }
+.swipe-title { margin: 25px 0 22px; color: #f3f5f7; font-size: 34px; line-height: 1.12; font-weight: 650; letter-spacing: -1.2px; }
+.swipe-categories { display: flex; gap: 7px; overflow-x: auto; scrollbar-width: none; margin-bottom: 22px; }
+.swipe-categories button { flex: none; font-size: 11px; min-height: 40px; padding: 8px 12px; border-radius: 22px; background: #ffffff05; border: 1px solid #c0d7e418; color: #b0c0cd; }
+.swipe-categories button[aria-pressed=true] { background: #c3d9e61a; color: #edf3f7; border-color: #bdd8e83d; }
+
+.swipe-deck { position: relative; margin: 0 2px 15px; perspective: 1000px; }
+.swipe-card-back { position: absolute; inset: 8px 8px -8px; border-radius: 28px; overflow: hidden; transform: rotate(2deg); background: #34495b; border: 1px solid #d7e5ef25; }
+.swipe-card-back img { width: 100%; height: 100%; object-fit: cover; opacity: .35; filter: blur(4px); }
+.swipe-destination {
+  position: relative;
+  height: clamp(340px, calc(100svh - 318px), 570px);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid #d4e7f528;
+  box-shadow: 0 16px 32px #0003;
+  touch-action: pan-y;
+  user-select: none;
+  transition: transform .28s ease, opacity .25s ease;
+  transform-origin: center 90%;
+  background: #142b36;
+  outline-offset: 5px;
+}
+.swipe-destination.dragging { transition: none; cursor: grabbing; }
+.swipe-destination.exiting { transition: transform .3s ease-in, opacity .3s; opacity: 0; }
+.swipe-destination > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.swipe-photo-shade { position: absolute; inset: 0; background: linear-gradient(180deg, #0c1c3435, transparent 30%, #08182065 50%, #08141ce8 84%, #08141cfa); }
+.swipe-card-top { position: absolute; inset: 17px 17px auto; display: flex; justify-content: space-between; align-items: center; }
+.swipe-card-top > span { font-size: 12px; font-variant-numeric: tabular-nums; letter-spacing: .4px; padding: 8px 11px; border-radius: 20px; color: #edf4f9; background: #13263665; backdrop-filter: blur(16px); border: 1px solid #fff2; }
+.swipe-card-top i { font-style: normal; color: #c8d4e0; font-size: 10px; }
+.swipe-card-top > button { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #2637485c; backdrop-filter: blur(16px); border: 1px solid #ffffff38; color: white; }
+.swipe-card-top > button[aria-pressed=true] { color: #c8f5df; background: #3a756d80; }
+.swipe-card-copy { position: absolute; inset: auto 22px 19px; }
+.swipe-window { font-size: 11px; font-weight: 500; line-height: 1.6; color: #c6e4dd; display: block; margin-bottom: 10px; }
+.swipe-card-copy h2 { font-size: 39px; line-height: 1.07; letter-spacing: -1.2px; font-weight: 650; color: #f5f7fa; margin: 0 0 9px; }
+.swipe-card-copy h3 { font-size: 15px; line-height: 1.45; font-weight: 550; color: #ecf1f5; margin: 0 0 8px; }
+.swipe-card-copy > p { font-size: 12px; color: #c0cbd0; line-height: 1.6; margin: 0 0 16px; max-width: 280px; }
+.swipe-detail-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-top: 1px solid #d3e8f223; padding-top: 7px; }
+.swipe-detail-row > span { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #c3d2dc; }
+.swipe-detail-row button { display: flex; align-items: center; gap: 6px; min-height: 44px; background: none; font-size: 12px; color: #edf3f9; padding: 4px 0 4px 8px; }
+
+.swipe-finished { text-align: center; padding: 65px 12px 35px; color: #b7d5ce; }
+.swipe-finished h2 { font-size: 29px; font-weight: 600; color: #eef4f7; line-height: 1.2; letter-spacing: -.7px; }
+.swipe-finished > button { margin: 15px auto; display: flex; }
+.swipe-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+@media (max-width: 360px) {
+  .season-swipe-page { padding-inline: 18px; }
+  .swipe-title { font-size: 32px; }
+  .swipe-categories button { padding-inline: 10px; }
+  .swipe-card-copy { left: 18px; right: 18px; }
+  .swipe-card-copy h2 { font-size: 34px; }
+}
+@media (max-height: 760px) {
+  .season-swipe-page { padding-top: 16px; }
+  .swipe-title { margin: 20px 0; font-size: 32px; }
+  .swipe-categories { margin-bottom: 18px; }
+  .swipe-card-copy { inset: auto 18px 14px; }
+  .swipe-card-copy h2 { font-size: 34px; }
+  .swipe-card-copy > p { display: none; }
+  .swipe-card-top { inset: 14px 15px auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .swipe-destination, .swipe-destination.exiting { transition: none; }
+}

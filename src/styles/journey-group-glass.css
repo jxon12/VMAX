@@ -1,0 +1,39 @@
+/* Conversation is the canvas. Agent tools live in one compact control row. */
+.journey-glass .jg-group{display:flex;flex-direction:column;height:max(360px,calc(100svh - 308px));min-height:0;margin:0}
+.journey-glass .jg-group .j-section-heading{flex:none;margin:0 0 14px;align-items:center}
+.journey-glass .jg-group .j-section-heading h2{font-size:26px;line-height:1.2;letter-spacing:-.7px;font-weight:600;margin:0 0 4px}
+.journey-glass .jg-group .j-section-heading .j-text-button{color:#a9b4c7;font-size:12px;min-height:28px;line-height:1.5;padding:0}
+.jg-chat-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:none;padding-bottom:15px;margin-bottom:4px;border-bottom:1px solid #ffffff0d}
+.jg-chat-tools button{display:flex;align-items:center;gap:8px;min-height:38px;padding:8px 12px;border-radius:99px;background:#ffffff06;color:#cbd2e1;border:1px solid #ffffff12;font-size:12px}
+.jg-chat-tools button>i{font-size:15px;font-style:normal;color:#d9d7f3}
+.jg-chat-tools .jg-decisions-trigger{background:#b9b2df0a;color:#cdc8eb;border-color:#bcb3e326}
+.journey-glass .jg-group .j-message-list{flex:1;max-height:none;min-height:140px;overflow-y:auto;padding:5px 0 8px;scrollbar-width:thin;scrollbar-color:#c4cbdf24 transparent;overscroll-behavior:contain}
+.journey-glass .jg-group .j-message{padding-right:17px;margin:0 0 19px;gap:9px}.journey-glass .jg-group .j-message.mine{padding:0 0 0 44px}
+.journey-glass .jg-group .j-message-bubble{max-width:100%;padding:13px 15px;background:#ffffff08;border-color:#ffffff0d;border-radius:20px 20px 20px 6px;box-shadow:inset 0 1px #ffffff06}
+.journey-glass .jg-group .j-message.mine .j-message-bubble{background:linear-gradient(145deg,#b8bfdc21,#9da7cc14);border-color:#c0c7e626;border-radius:20px 20px 6px 20px}
+.journey-glass .jg-group .j-message.ai .j-message-bubble{background:linear-gradient(140deg,#b3b2d416,#ffffff06);border-color:#bcb9e421}
+.journey-glass .jg-group .j-message-bubble>small{color:#bfc8db;font-size:11px;line-height:1.5;gap:8px;align-items:baseline;flex-wrap:wrap}
+.journey-glass .jg-group .j-message-bubble time{color:#8593a9;font-size:9px;white-space:normal}.journey-glass .jg-group .j-message-bubble p{color:#e4e9f2;font-size:14px;line-height:1.65;margin-top:6px}
+.journey-glass .jg-group .jr-agent-avatar,.journey-glass .jg-group .j-avatar{width:27px;height:27px;font-size:10px}.journey-glass .jg-group .jr-agent-avatar i{width:8px;height:8px;background:#d0cdee;border-color:#263043}
+.journey-glass .jg-group .agent-chat-link{background:#c4c4ea10;border:1px solid #c4c4ea1c;padding:10px 11px;color:#dddff2;border-radius:13px;font-size:12px;min-height:44px;line-height:1.4}
+.journey-glass .jg-group .agent-chat-suggestions{flex:none;gap:7px;margin:4px 0 0;padding:5px 0 9px;border-top:1px solid #ffffff08;scrollbar-width:none}
+.journey-glass .jg-group .agent-chat-suggestions>button{min-height:35px;border-color:#ffffff14;color:#bdc6d7;background:transparent;font-size:11px}
+.journey-glass .jg-group .jr-chat-composer{position:relative;bottom:auto;z-index:8;flex:none;padding:0;background:none;border-radius:99px;margin-top:0}
+.journey-glass .jg-group .jr-chat-composer form{padding:5px 6px;gap:5px;background:linear-gradient(150deg,#ffffff18,#ffffff08);border:1px solid #ffffff24;box-shadow:inset 0 1px #ffffff15,0 10px 25px #0002;border-radius:28px;backdrop-filter:blur(24px) saturate(135%);-webkit-backdrop-filter:blur(24px) saturate(135%)}
+.journey-glass .jg-group .jr-chat-composer input{font-size:14px;min-height:44px;color:#f0f3f9;padding:9px 3px}.journey-glass .jg-group .jr-chat-composer input::placeholder{color:#98a4b9}
+.journey-glass .jg-group .jr-chat-composer form:focus-within{outline:2px solid #d3d7ff;outline-offset:3px}.journey-glass .jg-group .jr-chat-composer input:focus-visible{outline:none}
+.journey-glass .jg-group .jr-at-button{background:none;color:#ccd1e5;font-size:21px;width:40px;height:42px}
+.journey-glass .jg-group .j-send{background:#d7dceb;color:#263245;width:42px;height:42px;border:1px solid #ffffff60}.journey-glass .jg-group .j-send:disabled{background:#ffffff0d;border-color:#ffffff0c;color:#9aa5ba;opacity:.6}
+.journey-glass .jg-group .jr-mention-menu{max-height:min(330px,45svh);bottom:65px;background:linear-gradient(145deg,#343d4cf2,#202a3bf5);border-color:#ffffff30;border-radius:25px;box-shadow:inset 0 1px #ffffff1a,0 20px 60px #0007;backdrop-filter:blur(35px);-webkit-backdrop-filter:blur(35px)}
+.journey-glass .jg-group .jr-mention-menu>div strong{font-size:13px;color:#e1e6ef}.journey-glass .jg-group .jr-mention-menu>div small{font-size:10px;color:#a7b3c8}
+.journey-glass .jg-group .jr-mention-menu>button{min-height:59px}.journey-glass .jg-group .jr-mention-menu>button strong{font-size:13px}.journey-glass .jg-group .jr-mention-menu>button small{font-size:10px;color:#a6b1c7}
+.journey-glass .jg-group .agent-chat-history>summary{font-size:10px;min-height:35px;color:#909db4;text-align:center;padding:8px}
+.journey-glass .jg-group .agent-conversation-welcome{border:0;background:none;font-size:13px;line-height:1.7;max-width:230px;margin:26px auto;color:#aab5c8;padding:12px 0}
+.journey-glass .jg-group>.j-demo-label{flex:none;margin:9px 0 0;font-size:9px;line-height:1.4;color:#8c99af}
+.journey-glass .agent-decision-row{background:var(--jg-glass);border-color:var(--jg-line);border-radius:20px;padding:17px 15px;min-height:80px;margin:12px 0;box-shadow:var(--jg-shadow)}
+.journey-glass .agent-decision-row strong{font-size:15px;font-weight:550}.journey-glass .agent-decision-row small{color:#b0b9cc;font-size:12px}
+.journey-glass .agent-member-permissions{padding:17px 0;gap:13px}.journey-glass .agent-member-permissions strong{font-size:15px}.journey-glass .agent-member-permissions small{font-size:12px;line-height:1.6;color:#aab5c9}
+.journey-glass .agent-legacy-note{font-size:10px;color:#a4adc0}
+@media(min-width:481px){.journey-glass .jg-group{height:max(380px,calc(100svh - 338px))}}
+@media(max-width:360px){.journey-glass .jg-group .j-message{padding-right:8px;gap:7px}.journey-glass .jg-group .j-message-bubble{padding:11px 12px}.journey-glass .jg-group .j-message-bubble p{font-size:13px}.jg-chat-tools button{padding-inline:11px}}
+@media(prefers-reduced-transparency:reduce){.journey-glass .jg-group .jr-chat-composer form,.journey-glass .jg-group .jr-mention-menu{background:#293547;backdrop-filter:none;-webkit-backdrop-filter:none}}

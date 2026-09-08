@@ -1,0 +1,73 @@
+/* V-MAX feels present, while every action remains explicit. */
+.app-lens .assistant-lens.assistant-sheet--full{background:radial-gradient(ellipse at 50% 17%,#39433f77,transparent 53%),#111515;color:#f7f8f4;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;padding:18px 22px calc(26px + env(safe-area-inset-bottom));border-radius:0;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+.app-lens .assistant-lens .assistant-topbar{grid-template-columns:44px 1fr 44px;min-height:44px;align-items:center}
+.app-lens .assistant-lens .assistant-topbar>span{font-size:12px;letter-spacing:.13em;color:#f0f3edf0}
+.app-lens .assistant-lens .assistant-topbar button{min-width:44px;height:44px;border-color:#ffffff3d;background:linear-gradient(135deg,#ffffff17,#ffffff04);box-shadow:inset 0 1px #ffffff40;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);color:#e5eae4}
+.assistant-lens .lens-assistant-light{position:absolute;z-index:-1;pointer-events:none;top:100px;left:50%;width:290px;height:170px;border-radius:50%;background:radial-gradient(ellipse,#a9a9d71b,#b5dab50d 40%,transparent 70%);transform:translateX(-50%)}
+.app-lens .assistant-lens .assistant-ambient:before{background:#9bae9230;opacity:.23;left:-28%;top:14%;width:230px;height:260px}
+.app-lens .assistant-lens .assistant-ambient:after{background:#aaa0ed18;opacity:.4;right:-24%;bottom:15%}
+.app-lens .assistant-lens .assistant-agent-hero{margin-top:32px}
+.app-lens .assistant-lens .assistant-agent-orb{position:relative;gap:18px;padding:8px 24px 0}
+.app-lens .assistant-lens .assistant-agent-orb>.orb{width:112px;height:112px;box-shadow:inset 0 0 0 1px #f3f5ff66,inset -8px -12px 20px #28134877,0 20px 45px #070b1144;filter:drop-shadow(0 10px 25px #9e8bdb28)}
+.app-lens .assistant-lens .assistant-agent-orb>span:not(.orb){font-size:11px;letter-spacing:.015em;color:#d0d8d0;min-height:34px;padding:7px 13px;border:1px solid #ffffff22;border-radius:99px;background:#ffffff05}
+.lens-orb-orbit{position:absolute;top:-3px;left:50%;width:138px;height:138px;transform:translateX(-50%) rotate(-25deg);border-radius:50%;border:1px solid #ffffff15;border-top-color:#ffffff45;border-right-color:#ffffff05;pointer-events:none;box-shadow:0 0 25px #b2a0ef06}
+.app-lens .assistant-lens .assistant-agent-hero>p{margin:22px 0 11px;font-size:9px;letter-spacing:.16em;color:#bfc7bf}
+.app-lens .assistant-lens .assistant-agent-hero h2{font:500 37px/1.03 "Iowan Old Style",Baskerville,Georgia,serif;letter-spacing:-1.2px}
+.app-lens .assistant-lens .assistant-agent-hero>small{max-width:275px;margin-top:13px;font-size:12px;line-height:1.6;color:#b3bdb5}
+.app-lens .assistant-lens .assistant-agent-proof{border:0;background:none;box-shadow:none;border-radius:0;overflow:visible;margin-top:30px}
+.app-lens .assistant-lens .assistant-agent-proof>header{padding:0 2px 13px;border:0;align-items:center}
+.app-lens .assistant-lens .assistant-agent-proof>header>span{color:#b9c1ba;font-size:9px;letter-spacing:.1em}
+.app-lens .assistant-lens .assistant-agent-proof>header>i{font-size:9px;background:none;padding:0;color:#d2c8f7}
+.app-lens .assistant-lens .assistant-agent-proof .lens-assistant-decision{position:relative;display:block;overflow:hidden;border:1px solid #ffffff21;border-radius:26px;padding:0;margin:0 0 14px;background:#ffffff04}
+.app-lens .assistant-lens .assistant-agent-proof .lens-assistant-decision.is-featured{border:0;background:none;box-shadow:0 12px 30px #0002;min-height:150px}
+.lens-decision-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%;opacity:.65}
+.lens-decision-shade{position:absolute;inset:0;background:linear-gradient(90deg,#23312ef5 5%,#23312ec7 46%,#23312e65);border-radius:26px}
+.app-lens .assistant-lens .lens-assistant-decision>button{position:relative;z-index:1;width:100%;min-height:150px;display:flex;align-items:center;gap:12px;padding:19px 18px;background:transparent;color:#f5f7f2;text-align:left}
+.lens-assistant-decision>button>span:nth-child(2){flex:1;min-width:0}
+.lens-assistant-action-icon{width:38px;height:38px;display:grid;place-items:center;border:1px solid #ffffff36;border-radius:50%;background:#ffffff0c;box-shadow:inset 0 1px #ffffff2e;flex:none}
+.app-lens .assistant-lens .lens-assistant-decision small{font-size:8px;font-weight:500;letter-spacing:.08em;color:#d0d9d0}
+.app-lens .assistant-lens .lens-assistant-decision strong{font:500 22px/1.12 "Iowan Old Style",Baskerville,Georgia,serif;letter-spacing:-.5px;display:block;margin-top:8px;color:#fff}
+.app-lens .assistant-lens .lens-assistant-decision em{display:block;font-size:10px;color:#ccd5ce;line-height:1.6;font-style:normal;margin-top:9px}
+.app-lens .assistant-lens .assistant-agent-proof :is(strong,em){white-space:normal;overflow:visible;text-overflow:clip}
+.app-lens .assistant-lens .agent-assistant-actions>button{padding:17px 3px;border-color:#ffffff16;min-height:80px;gap:14px;color:#eef1ea}
+.app-lens .assistant-lens .agent-assistant-actions>button>svg{color:#c6cfc5}
+.app-lens .assistant-lens .agent-assistant-actions>button strong{font-size:14px;line-height:1.35;font-weight:550}
+.app-lens .assistant-lens .agent-assistant-actions>button small{font-size:8px;color:#b5bfb6;letter-spacing:.1em}
+.app-lens .assistant-lens .agent-assistant-actions>button em{font-size:11px;color:#acb8ae}
+.app-lens .assistant-lens .assistant-type-toggle{display:flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:10px 17px;margin:15px auto 0;border:1px solid #ffffff2c;border-radius:24px;background:linear-gradient(135deg,#ffffff15,#ffffff03);color:#e3e9e0;font-size:12px;box-shadow:inset 0 1px #ffffff28}
+.app-lens .assistant-lens .assistant-agent-privacy{margin:19px auto 0;max-width:265px;line-height:1.6;color:#a0ada3;font-size:10px}
+.app-lens .assistant-lens .assistant-prompt{background:#ffffff06;border-color:#ffffff30;border-radius:23px;margin-top:20px;box-shadow:inset 0 1px #ffffff17}
+.app-lens .assistant-lens .assistant-prompt--compact{position:relative;left:auto;right:auto;bottom:auto;width:100%}
+.app-lens .assistant-lens .assistant-prompt textarea{font-size:14px;color:#eef2e9}
+.app-lens .assistant-lens :is(.assistant-send,.assistant-mic){width:44px;height:44px;border-color:#ffffff35;background:linear-gradient(135deg,#ffffff1b,#ffffff05);color:#edf2e7;backdrop-filter:blur(5px)}
+.app-lens .assistant-lens .assistant-identity--voice{margin:64px auto 38px}
+.app-lens .assistant-lens .assistant-identity--voice .orb{width:130px;height:130px}
+.app-lens .assistant-lens .voice-conversation{min-height:0;padding-top:4px}
+.app-lens .assistant-lens .voice-conversation>p{font-size:10px;line-height:1.6;color:#c9c6e3;letter-spacing:.04em}
+.app-lens .assistant-lens .voice-conversation>h2{font-size:36px;line-height:1.1;letter-spacing:-1px}
+.app-lens .assistant-lens .voice-result{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:30px;border-block:1px solid #ffffff20}
+.app-lens .assistant-lens .voice-result>div{display:block;min-height:82px;padding:16px 12px;text-align:left;border:0;border-radius:0;background:transparent}
+.app-lens .assistant-lens .voice-result span{display:block;font-size:11px;color:#acb6ac}
+.app-lens .assistant-lens .voice-result strong{display:block;margin-top:7px;font-size:15px;color:#f1f4eb}
+.app-lens .assistant-lens .voice-apply{margin-top:25px;background:#eff2e9;color:#19221d;border-radius:23px;min-height:52px;font-size:14px}
+.app-lens .assistant-lens .voice-cancel{min-height:44px;color:#c3cec3;font-size:13px;margin-top:30px}
+.app-lens .assistant-lens .voice-edge{opacity:.45}
+.app-lens .assistant-lens .demo-film{background:none;border:0;box-shadow:none;margin-top:28px;overflow:visible}
+.app-lens .assistant-lens .demo-film__scene{min-height:370px;background:none;overflow:visible;padding:26px 0 30px}
+.app-lens .assistant-lens .demo-film__orb-wrap{margin-bottom:32px}
+.app-lens .assistant-lens .demo-film__orb-wrap .orb{width:120px;height:120px}
+.app-lens .assistant-lens .demo-film__ring{width:150px;height:150px;border-color:#ffffff32}
+.app-lens .assistant-lens .demo-film h2{font-size:40px;line-height:1.04;letter-spacing:-1.2px}
+.app-lens .assistant-lens .demo-film__wake{color:#c5cdbf;letter-spacing:.15em}
+.app-lens .assistant-lens .demo-film__caption{color:#c5cec2;font-size:13px}
+.lens-intro-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:23px 0;border-block:1px solid #ffffff22;gap:12px;text-align:left}
+.lens-intro-steps>span{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-width:0}
+.lens-intro-steps svg{color:#d0d9cb}
+.lens-intro-steps strong{font-size:12px;font-weight:550;color:#f3f5ed}
+.lens-intro-steps small{font-size:10px;line-height:1.6;color:#b3bdb0}
+.app-lens .assistant-lens .demo-intro__copy{margin-top:22px;text-align:center}
+.app-lens .assistant-lens .demo-intro__copy p{font-size:13px;color:#d8dfd3}
+.app-lens .assistant-lens .demo-intro__copy span{display:block;color:#a5b2a5;font-size:10px;line-height:1.6}
+.app-lens .assistant-lens .demo-continue{min-height:52px;border-radius:24px;background:#f0f3e9;color:#1c241d;border-color:#ffffff6b;font-size:14px}
+@media(max-width:360px){.app-lens .assistant-lens.assistant-sheet--full{padding-inline:18px}.app-lens .assistant-lens .assistant-agent-hero h2{font-size:33px}.app-lens .assistant-lens .lens-assistant-decision>button{gap:9px;padding-inline:14px}.app-lens .assistant-lens .lens-assistant-decision strong{font-size:20px}.lens-assistant-action-icon{width:32px;height:32px}.app-lens .assistant-lens .demo-film h2{font-size:35px}}
+@media(prefers-reduced-transparency:reduce){.app-lens .assistant-lens .lens-assistant-decision.is-featured{background:#25352e}.assistant-lens .lens-decision-photo{display:none}}

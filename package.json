@@ -1,0 +1,24 @@
+{
+  "name": "V-MAX",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "tsc --ignoreConfig --module commonjs --target ES2022 --skipLibCheck --outDir .test-build --rootDir src src/domain/trips.ts src/domain/agents.ts src/domain/group.ts src/domain/receipt.ts src/domain/preparation.ts src/domain/profile.ts src/domain/assistant.ts && node --test tests/trips.test.cjs tests/agents.test.cjs tests/group.test.cjs tests/receipt.test.cjs tests/preparation.test.cjs tests/profile.test.cjs tests/assistant.test.cjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "simple-liquid-glass": "4.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
