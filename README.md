@@ -10,13 +10,11 @@ A mobile-first travel companion exploring **permissioned personal Agents, shared
 | --- | --- |
 | Project | V-MAX  |
 | Team |V-MAX |
-| Members | LOUISE LIOU (FRONTEND & UIUX), NG SIM YEE & CJ (Backend Developer) Joshua (Mental health support & Leader) |
+| Members | LOUISE LIOU (Frontend& UIUX), NG SIM YEE & CJ (Backend Developer) Joshua (Mental health support & Leader) |
 | Problem track | Lifestyle Track: Planning an Escape — Travel Planner |
 | Public GitHub repository | https://github.com/jxon12/VMAX |
 | Demo video | **NEEDS TEAM INPUT — unlisted YouTube URL, no longer than 5 minutes** |
 | Public working prototype | **NEEDS TEAM INPUT — deployed URL; a localhost address is not accessible to judges** | 
-
-The organizer collects the **public GitHub URL and unlisted YouTube URL**. Put the evidence judges need in this README or the video; do not depend on them finding an external board or private file. **Ideation is assessed through the README, not the video.** Supplementary links should have their essential evidence reproduced here.
 
 **Reading guide:** [Problem and impact](#1-overview-problem-and-impact) · [Solution](#2-solution-and-distinctive-experience) · [Ideation](#3-ideation-and-iterations) · [Design](#4-design-and-user-experience) · [Implementation boundaries](#5-what-the-prototype-actually-does) · [Architecture](#6-architecture-and-feasibility) · [Run and evaluate](#7-run-and-evaluate) · [Submission checklist](#8-evidence-and-submission-checklist)
 
