@@ -258,8 +258,6 @@ npm run dev
 - **Repository:** [jxon12/VMAX](https://github.com/jxon12/VMAX)
 - **UI prototype:** [vmax-one.vercel.app](https://vmax-one.vercel.app/)
 - **Demo video:** [Watch V-MAX on YouTube](https://youtu.be/ANwxJTD3X8c).
-- **Slides:** confirm whether used.
-- **Still to attach/verify:** original sketches, permitted mentor evidence, documented tester observations, asset rights and public repository access.
 
 Ideation evidence remains in this README. Supporting notes supplement it, not replace it. The final submitted links are the public repository and the unlisted video.
 
