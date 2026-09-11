@@ -99,10 +99,7 @@ In the sample receipt, MYR64 pizza is divided **1 : 2 : 1 : 0**; MYR4 water is s
 
 ### Ideation boards
 
-Reconstructed from our design conversation on **8 September 2026**. These are retrospective summaries; original sketches are still to be attached.
-
-<details>
-<summary>Open the idea map — people, causes and alternatives</summary>
+These retrospective summaries were reconstructed from our design conversation on **8 September 2026**. The idea map connects people's coordination problems to the alternatives we considered and the direction we chose.
 
 ```mermaid
 mindmap
@@ -131,8 +128,6 @@ mindmap
       Shared decisions
         Confirm before changing
 ```
-
-</details>
 
 <details>
 <summary>Open the chosen decision flow — a suggestion isn't an agreement</summary>
@@ -164,7 +159,7 @@ Missing permissions, an infeasible time or outstanding approvals must not silent
 | Too many features may not fit the pitch | One connected story: disruption → coordination → approval → updated Journey |
 | Do the experience better, not just claim something new | Less organizer chasing, explicit sharing boundaries and manual control |
 
-We developed the permission and Split & Sync interactions in response. Hermes/OpenClaw are **not integrated**. This is Louise's recollection, not a verified transcript; permitted meeting evidence is still to be attached.
+We developed the permission and Split & Sync interactions in response. Hermes/OpenClaw are **not integrated**. Feedback above is paraphrased from Louise's recollection, not a verbatim transcript.
 
 ## 3. Design & Prototype
 
@@ -178,7 +173,13 @@ We developed the permission and Split & Sync interactions in response. Hermes/Op
 
 **The “wow” is the handoff: a permitted answer becomes an agreed change in the actual plan.**
 
-Personal representation, Split & Sync and visible follow-through form one experience. Agent agreement alone isn't proof of correctness: permission checks, timing rules and user review remain necessary. We don't claim to invent AI travel planning; we focus on the organizer's remaining work.
+| Differentiator | See it in the prototype |
+| --- | --- |
+| **Personal Agents — less chasing** | Joshua is unavailable. Ask his Agent for permitted availability; his private meeting address stays private. |
+| **Split & Sync — separate plans, one reunion** | Friends explore while Joshua works. An infeasible dinner time is blocked; a feasible proposal reaches the Journey only after required approvals. |
+| **Proactive follow-through — beyond an alert** | In the museum-closure scenario, inspect the source, review an alternative and confirm the change. The Journey updates, not just the conversation. |
+
+Agent replies and detection are simulated; local checks and itinerary updates work. Agent agreement alone isn't proof of correctness: permissions, timing checks and user approval still matter. We don't claim to invent AI travel planning; we focus on the organizer's remaining work.
 
 ## 5. Technical Architecture & Feasibility
 
@@ -195,14 +196,15 @@ Current path: **interface → domain checks → Journey state → browser storag
 
 **First proof: two real members → ask a personal Agent → review a reunion → both approve → both Journeys update.**
 
-Proposed scope: **one city, small groups, one reunion and one disruption workflow.** All backend integrations below are planned, not connected to this prototype.
+Initial pilot scope: **one city, small groups, one reunion and one disruption workflow.** Stages 1–3 below define that pilot. All backend integrations are planned, not connected to this prototype.
 
 | Stage | What we would build | Ready when… |
 | --- | --- | --- |
 | **1 · Connect the group** | Sign-in, expiring invitations, shared Journey/chat and private ticket storage | Two devices stay in sync; non-members cannot read the trip or its files |
 | **2 · Coordinate with permission** | Personal-Agent tools, shared availability, conflict checks and member approvals | A reunion updates once after required approvals; private details stay private |
 | **3 · Catch a change** | Scheduled venue checks, dated evidence, an alternative and an opt-in notification | A verified change produces one reviewable proposal; stale proposals cannot overwrite newer plans |
-| **4 · Extend the assistant** | Realtime voice, reviewed receipt extraction and flight comparison | Misread items can be corrected; quotes are refreshed; nothing is silently purchased |
+
+**Later extensions — outside the initial pilot:** realtime voice, receipt extraction with user review, and flight comparison with refreshed quotes. Nothing is silently purchased.
 
 <details>
 <summary>Proposed backend & APIs — what powers each moment?</summary>
@@ -229,7 +231,7 @@ Personal Agents do not need separate always-running models. Coordination happens
 <details>
 <summary>Delivery assumptions, checks and local setup</summary>
 
-Four contributors are available. An illustrative **8–10 week pilot** depends on skills and availability; neither schedule nor budget is committed. The proposed [Supabase Pro plan](https://supabase.com/pricing) starts at **US$25/month**; Vercel plan costs, model usage, travel APIs and overages are additional and unconfirmed.
+Four contributors are available. An illustrative **8–10 week pilot covers stages 1–3 only**, subject to skills and availability; neither schedule nor budget is committed. Voice, receipt extraction and flight comparison have no committed delivery date. The proposed [Supabase Pro plan](https://supabase.com/pricing) starts at **US$25/month**; Vercel plan costs, model usage, travel APIs and overages are additional and unconfirmed.
 
 **Checks recorded 8 September:** 78/78 regression tests and a production build passed, including clean-copy installation. Mobile checks covered 320px and 390px. These are implementation checks, not measured user-impact results. The deployed frontend opened without sign-in during the README review.
 
@@ -253,7 +255,7 @@ npm run dev
 | Frontend & UI/UX | Backend | AI | Team lead & team wellbeing support |
 
 <details>
-<summary>Submission links & remaining evidence</summary>
+<summary>Submission links</summary>
 
 - **Repository:** [jxon12/VMAX](https://github.com/jxon12/VMAX)
 - **UI prototype:** [vmax-one.vercel.app](https://vmax-one.vercel.app/)
