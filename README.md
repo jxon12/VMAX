@@ -8,7 +8,7 @@ Your friend is in a meeting. Plans have changed. **Why is it still your job to c
 
 Personal travel Agents. Shared decisions. **Your final say.**
 
-**[Watch the demo ↗](https://youtu.be/ANwxJTD3X8c)** · **[Try the live prototype ↗](https://vmax-one.vercel.app/)** · [Pick a demo moment](#three-moments-to-try) · [How we got here](#2-ideation--process) · [Build plan](#5-technical-architecture--feasibility)
+**[Watch the demo ↗](https://youtu.be/4HEiN7LAuDQ)** · **[Try the live prototype ↗](https://vmax-one.vercel.app/)** · [Pick a demo moment](#three-moments-to-try) · [How we got here](#2-ideation--process) · [Build plan](#5-technical-architecture--feasibility)
 
 Lifestyle Track: Planning an Escape · Travel Planner · Team V-MAX
 
@@ -257,7 +257,7 @@ npm run dev
 
 - **Repository:** [jxon12/VMAX](https://github.com/jxon12/VMAX)
 - **UI prototype:** [vmax-one.vercel.app](https://vmax-one.vercel.app/)
-- **Demo video:** [Watch V-MAX on YouTube](https://youtu.be/ANwxJTD3X8c).
+- **Demo video:** [Watch V-MAX on YouTube](https://youtu.be/4HEiN7LAuDQ).
 
 Ideation evidence remains in this README. Supporting notes supplement it, not replace it. The final submitted links are the public repository and the unlisted video.
 
