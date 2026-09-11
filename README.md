@@ -8,7 +8,7 @@ Your friend is in a meeting. Plans have changed. **Why is it still your job to c
 
 Personal travel Agents. Shared decisions. **Your final say.**
 
-**[Try the live prototype ↗](https://vmax-one.vercel.app/)** · [Pick a demo moment](#three-moments-to-try) · [How we got here](#2-ideation--process) · [Build plan](#5-technical-architecture--feasibility)
+**[Watch the demo ↗](https://youtu.be/ANwxJTD3X8c)** · **[Try the live prototype ↗](https://vmax-one.vercel.app/)** · [Pick a demo moment](#three-moments-to-try) · [How we got here](#2-ideation--process) · [Build plan](#5-technical-architecture--feasibility)
 
 Lifestyle Track: Planning an Escape · Travel Planner · Team V-MAX
 
@@ -186,12 +186,45 @@ Personal representation, Split & Sync and visible follow-through form one experi
 | --- | --- | --- |
 | Interface | React · TypeScript · Vite · CSS · `simple-liquid-glass` | Keep the mobile-first web experience and browser fallbacks |
 | State & identity | Domain rules + browser `localStorage`; local profile only | Supabase Auth/Postgres, verified trip membership and server-enforced permissions |
-| Agents & data | Deterministic scenarios, fixtures and local calculations | Bounded orchestration + verified source adapters; providers not yet selected |
+| Agents & data | Deterministic scenarios, fixtures and local calculations | Permission-scoped tool calling + source adapters; candidate APIs below |
 | Hosting | **Public frontend on Vercel** | Retain Vercel; add the authenticated backend |
 
 Current path: **interface → domain checks → Journey state → browser storage**. Production must recheck permissions, constraints and trip version server-side. Models must not control authorization or arithmetic alone.
 
-**Pilot: one city, small groups, one disruption/reunion workflow.** First sign-in and sync, then a reliable venue source and concurrency/permission testing. Voice, reviewed receipt extraction and live flight search follow. Automatic purchases and taxi dispatch stay out of scope.
+### Backend build plan — make the handoff real
+
+**First proof: two real members → ask a personal Agent → review a reunion → both approve → both Journeys update.**
+
+Proposed scope: **one city, small groups, one reunion and one disruption workflow.** All backend integrations below are planned, not connected to this prototype.
+
+| Stage | What we would build | Ready when… |
+| --- | --- | --- |
+| **1 · Connect the group** | Sign-in, expiring invitations, shared Journey/chat and private ticket storage | Two devices stay in sync; non-members cannot read the trip or its files |
+| **2 · Coordinate with permission** | Personal-Agent tools, shared availability, conflict checks and member approvals | A reunion updates once after required approvals; private details stay private |
+| **3 · Catch a change** | Scheduled venue checks, dated evidence, an alternative and an opt-in notification | A verified change produces one reviewable proposal; stale proposals cannot overwrite newer plans |
+| **4 · Extend the assistant** | Realtime voice, reviewed receipt extraction and flight comparison | Misread items can be corrected; quotes are refreshed; nothing is silently purchased |
+
+<details>
+<summary>Proposed backend & APIs — what powers each moment?</summary>
+
+Start with **one TypeScript backend + Supabase + background workers**, reusing suitable domain rules rather than rebuilding the interface.
+
+| Capability | Candidate integration | Boundary |
+| --- | --- | --- |
+| Identity, shared data and files | [Supabase Auth, Postgres, Realtime and Storage](https://supabase.com/features) | Server-verified membership; database, channel and file-access policies |
+| Hey V-MAX and personal Agents | [OpenAI Responses API + function calling](https://developers.openai.com/api/docs/guides/function-calling) | Our backend executes allowlisted tools; each member has separate permissions and context |
+| Availability and feasible reunions | [Google Calendar FreeBusy](https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query) + [Google Routes](https://developers.google.com/maps/documentation/routes/compute-route-over) | Calendar access requires consent; expose busy/free times, not private meeting details |
+| Proactive trip updates | [Google Places](https://developers.google.com/maps/documentation/places/web-service/overview) + official venue sources; [Trigger.dev](https://trigger.dev/docs/tasks/scheduled) + [FCM](https://firebase.google.com/docs/cloud-messaging/web/get-started) | Check sources in background jobs; retain evidence timestamps; notifications require device support and permission |
+| Voice and document understanding | [OpenAI Realtime](https://developers.openai.com/api/docs/guides/realtime) + [image inputs](https://developers.openai.com/api/docs/guides/images-vision) | Start with in-app voice, not always-on wake words; users review extraction and code calculates splits |
+| Flight comparison | [Duffel Flights API](https://duffel.com/docs/guides/getting-started-with-flights) | Test environment first; live access, coverage and commercial terms need validation; refresh selected offers |
+
+**Agent proposes; server validates; members decide.** Structured results populate our existing UI cards. Shared changes require current permissions, constraints, approvals and a trip-version check before one atomic update. Audit history and conflict-aware undo preserve later edits.
+
+Planned safeguards include private credentials, scoped access to personal data, bounded retries, duplicate-action prevention and per-trip usage limits. Tests must cover revoked consent, simultaneous confirmations, stale sources and provider failures. Missing information stays **unknown**, not invented.
+
+Personal Agents do not need separate always-running models. Coordination happens through permission-scoped tools; an Agent answer is not automatically its owner's approval. Automatic purchases, taxi dispatch and indoor airport navigation remain outside the pilot.
+
+</details>
 
 <details>
 <summary>Delivery assumptions, checks and local setup</summary>
@@ -224,7 +257,7 @@ npm run dev
 
 - **Repository:** [jxon12/VMAX](https://github.com/jxon12/VMAX)
 - **UI prototype:** [vmax-one.vercel.app](https://vmax-one.vercel.app/)
-- **Unlisted video:** pending; maximum five minutes.
+- **Demo video:** [Watch V-MAX on YouTube](https://youtu.be/ANwxJTD3X8c).
 - **Slides:** confirm whether used.
 - **Still to attach/verify:** original sketches, permitted mentor evidence, documented tester observations, asset rights and public repository access.
 
